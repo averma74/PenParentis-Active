@@ -1,3 +1,20 @@
-page-register {
+.fields{
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  width: 100%;
+}
 
+#backButton{
+  position: relative;
+  color: dimgrey;
+  background-color: transparent;
+  left: 0%;
+  top: 20%;
+}
+
+#signUp{
+  position: absolute;
+  top: 60%;
+  left: 37%;
 }

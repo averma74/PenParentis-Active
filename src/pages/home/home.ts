@@ -1,3 +1,6 @@
+import {InAppBrowser} from "@ionic-native/in-app-browser";
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {GoalsPage} from '../goals/goals';
@@ -11,11 +14,15 @@ import {FacebookPage} from '../facebook/facebook';
 @IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
+  templateUrl: 'home.html'
 })
+
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Slides) slides: Slides;
+
+  goToSlide() {
+    this.slides.slideTo(2, 500);
   }
 
   goToGoals() {
@@ -34,9 +41,8 @@ export class HomePage {
     })
   }
   goToSalons(){
-    this.navCtrl.push(SalonsPage, {
+    const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
 
-    })
   }
   goToDonate(){
     this.navCtrl.push(DonatePage, {
@@ -53,6 +59,20 @@ export class HomePage {
 
     })
   }
+
+
+url: string;
+ constructor(public navCtrl: NavController, private inAppBrowser: InAppBrowser) {
+
+  }
+
+  openWebpage(){
+
+
+   const browser = this.inAppBrowser.create("https://google.com", "_self");
+
+  }
+
 
   slider=[
     {
@@ -74,6 +94,5 @@ export class HomePage {
       image:"assets/imgs/image6.png"
     }
   ];
-
 
 }

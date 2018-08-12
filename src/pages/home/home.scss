@@ -1,193 +1,252 @@
 .no-scroll .scroll-content{
-    overflow: hidden;
-  }
-  
-  .slider {
-    height: auto;
-    width:100%;
-  }
-  
-  .theThreeDots {
-    height: "400px";
-  }
-  
-  #backButton{
-    color: map-get($colors, white);
-    background-color: transparent;
-    top: 50px;
-    right: 10px;
-  }
-  
-  #forwardButton{
-    color: map-get($colors, white);
-    background-color: transparent;
-    top: 50px;
-    left: 335px;
-  }
-  
-  .underneathSlider {
-    background-color: #6d84d6;
-    font-family: "Avenir Next";
-    padding-top: 20px;
-    padding-bottom: 15px;
-  }
-  
-  .scroll-content {
+  overflow: hidden;
+}
+
+.slider {
+  height: auto;
+  width:100%;
+}
+
+#menu{
+  color: white;
+}
+
+/*
+#backButton{
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+}
+*/
+
+#forwardButton{
+  color: map-get($colors, white);
+  background-color: transparent;
+  top: 50px;
+  left: 335px;
+}
+
+.underneathSlider {
+  background-color: #6d84d6;
+  font-family: "Avenir Next";
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+
+  ion-slides {
     display: flex;
-    flex-direction: column;
-  
-    ion-slides {
-      display: flex;
-    }
   }
-  
-  
-  ion-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0 90px 1px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: "Courier New";
-    font-size: 100%;
-  }
-  
-  .row{
-    vertical-align: top;
-    horiz-align: center;
-    border-radius: 25px;
-  }
-  
-  .inner-pre{
-    font-family: "Avenir Next";
-    color: white;
-    text-align: center;
-    display: block;
-    padding-bottom: 20px;
-  }
-  
-  div.Membership{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Salons{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Donate{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Goals{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.WriteNow{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Resources{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Facebook{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Twitter{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  div.Instagram{
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-  }
-  
-  #memberText{
-    text-align: center;
-    padding-top: 0px;
-  }
-  
-  #memberButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #salonButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #donateButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #goalsButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #writeButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #resourcesButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #fbButton{
-  
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #twitterButton{
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  #igButton{
-  
-    border: white;
-    border-radius: 10px 10px 10px 10px;
-  }
-  
-  .swiper-pagination-bullet-active {
-  background: red;
-  opacity: 1;
-  }
-  .swiper-pagination-bullet{
-    background: white;
-  }
-  
+}
+
+
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 100%;
+}
+
+.row{
+  vertical-align: top;
+  horiz-align: center;
+  border-radius: 25px;
+}
+
+.inner-pre{
+  font-family: "Avenir Next";
+  color: white;
+  text-align: center;
+  display: block;
+  padding-bottom: 20px;
+}
+
+div.Membership{
+  //vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Salons{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Donate{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Goals{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.WriteNow{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Resources{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Facebook{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Twitter{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+div.Instagram{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+#memberText{
+  text-align: center;
+  padding-top: 0px;
+}
+
+#memberButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#salonButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#donateButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#goalsButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#writeButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#resourcesButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#fbButton{
+
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#twitterButton{
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#igButton{
+
+  border: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#memberImg{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#salonsImg{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+#donateImg{
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+#goalsImg{
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+#writeImg{
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+#resourcesImg{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#fbImg{
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+#twitterImg{
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+#igImg{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+.swiper-pagination-bullet-active {
+background: red;
+opacity: 1;
+}
+.swiper-pagination-bullet{
+  background: white;
+}
+
+

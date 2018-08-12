@@ -1,9 +1,16 @@
 <ion-header>
   <ion-navbar color="blue1">
+
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+
+    </ion-buttons>
     <ion-title text-center>
       Pocket Pen
     </ion-title>
-    <ion-icon class="theThreeDots" ios="ios-more" md="md-more" style="float:right; color:white;"></ion-icon>
   </ion-navbar>
 
 </ion-header>
@@ -19,13 +26,14 @@
   <!-- end of slides-->
 
   <ion-fab>
-    <button id="backButton" ion-button icon-start clear>
+    <button id="backButton" ion-button icon-start clear style="color: white;
+position: absolute; top: 50px; right: 10px;">
       <ion-icon name="arrow-back"></ion-icon>
     </button>
-  </ion-fab>
+    </ion-fab>
 
   <ion-fab>
-    <button id="forwardButton" ion-button icon-start clear>
+    <button id="forwardButton" ion-button icon-start click="goToSlide()" clear>
       <ion-icon name="arrow-forward"></ion-icon>
     </button>
   </ion-fab>
@@ -35,26 +43,26 @@
 <div class="row">
   <!-- Membership button -->
   <div class="Membership" style="padding-left: 35px; padding-top: 10px" >
-    <button ion-button color="white" id="memberButton" style="width:80px; height:80px;" (click)="goToMembership()">
-      <input type="image" src="assets/imgs/membership.png" style="height:55px"/>
+    <button ion-button color="white" id="memberButton" style="height: 80px;width: 80px;" (click)="goToMembership()">
+       <input type="image" id="memberImg" src="assets/imgs/membership.png" style="height:55px"/>
     </button>
     <span class="inner-pre">Membership</span>
   </div>
 
   <!-- Salons button -->
   <div class ="Salons" style="padding-left: 20px; padding-top: 10px">
-    <a href ="http://www.penparentis.org/calendar/" target="_blank">
+   <!-- <a href ="http://www.penparentis.org/calendar/" target="_self" location="yes">-->
     <button ion-button color="white" id="salonButton" style="width:80px; height:80px;" (click)="goToSalons()">
-      <input type="image" src="assets/imgs/salons.png" style="height:55px"/>
+      <input type="image" id="salonsImg" src="assets/imgs/salons.png" style="height:55px"/>
     </button>
-    </a>
+
     <span class="inner-pre">Salons</span>
   </div>
   <!-- Donate button -->
   <div class ="Donate" style="padding-left:10px; padding-top: 10px">
     <a href="https://www.paypal.com/donate/?token=ogHybF1IvV2OA7L0O2CqzZyPPx43cYewg9vPf9eva3u5OHxZ_iiBtDC4EgCK6BG-FE9wHG&country.x=US&locale.x=US" target="_blank">
       <button ion-button color="white" id="donateButton" style="width:80px; height:80px;"  >
-        <input type="image" src="assets/imgs/donate.png" style="height:55px"/>
+        <input type="image" id="donateImg" src="assets/imgs/donate.png" style="height:55px;"/>
       </button>
     </a>
   <span class="inner-pre">Donate</span>
@@ -66,21 +74,21 @@
   <!-- Goals Button -->
   <div class ="Goals" style="padding-top: 0px; padding-left: 35px">
     <button ion-button color="white" id="goalsButton" style="width:80px; height:80px" (click)="goToGoals()">
-      <input type="image" src="assets/imgs/goals.png" style="height:55px"/>
+      <input type="image" id="goalsImg" src="assets/imgs/goals.png" style="height:55px"/>
     </button>
    <span class="inner-pre">Goals</span>
   </div>
   <!-- Write Now Button -->
   <div class="WriteNow" style="padding-top: 0px; padding-left: 20px">
     <button ion-button color="white" id="writeButton" style="width:80px; height:80px" (click)="goToWriteNow()">
-      <input type="image" src="assets/imgs/writenow.png" style="height:55px"/>
+      <input type="image" id="writeImg" src="assets/imgs/writenow.png" style="height:55px"/>
     </button>
    <span class="inner-pre">Write Now</span>
   </div>
   <!-- Resources Button -->
   <div class="Resources" style="padding-top: 0px; padding-left: 10px;">
     <button ion-button color="white" id="resourcesButton" style="width:80px; height:80px;" (click)="goToResources()">
-      <input type="image" src="assets/imgs/resources.png" style="height:55px"/>
+      <input type="image" id="resourcesImg" src="assets/imgs/resources.png" style="height:55px"/>
     </button>
     <span class="inner-pre">Resources</span>
   </div>
@@ -92,27 +100,37 @@
   <!-- Facebook -->
   <div class="Facebook" style="padding-left:35px; padding-top:0px; padding-bottom: 0px;">
     <button ion-button color="white" id="fbButton" style="width:80px; height:80px" (click)="goToFacebook()">
-      <input type="image" src="assets/imgs/fb.png" style="height:55px"/>
+      <input type="image" id="fbImg" src="assets/imgs/fb.png" style="height:55px"/>
     </button>
     <span class="inner-pre">Facebook</span>
   </div>
   <!-- Twitter -->
   <div class="Twitter" style="padding-left:20px; padding-top:0px">
+    <a class="twitter-timeline" href="https://twitter.com/PenParentis" data-prefetch="true" data-widget-id="604257654391767041">
+
+
     <button ion-button color="white" id="twitterButton" style="width:80px; height:80px">
-      <input type="image" src="assets/imgs/twitter.png" style="height:55px" />
+      <input type="image" id="twitterImg" src="assets/imgs/twitter.png" style="height:55px; align-content: center;" />
     </button>
+    </a>
+    <script>
+      !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+    </script>
     <span class="inner-pre">Twitter</span>
   </div>
   <!-- Instagram -->
   <div class="Instagram" style="padding-left:10px; padding-top:0px">
-    <button ion-button color="white" id="igButton" style="width:80px; height:80px">
-      <input type="image" src="assets/imgs/ig.png" style="height:60px" />
+    <a href="#" onclick="window.open('http://google.com', '_blank', 'location=no');">
+    <button ion-button color="white" id="igButton" style="width:80px; height:80px" (click)="openWebpage()">
+      <input type="image" id="igImg" src="assets/imgs/ig.png" style="height:60px" />
     </button>
     <span class="inner-pre">Instagram</span>
+    </a>
   </div>
 </div>
 <div class="row" style="padding-left:50px">
 </div>
 
-</div><!-- this is the end of the bottom row div -->
+
+  </div><!-- this is the end of the bottom row div -->
 </ion-content>

@@ -1,1 +1,31 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+
+<ion-content padding>
+  <ion-list>
+    <ion-searchbar id ="searchbar"
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+
+    <ion-item class="buttons"  align-left>
+
+      <button menuClose ion-item style="font-size: 15px; color: darkgray" (click)="myCustomFunction(1)">
+        <span class="button-inner">
+          <ion-icon id="peopleIcon" name="people"></ion-icon>About Us</span>
+      </button>
+    <button menuClose ion-item style="font-size: 15px; color: darkgray;" (click)="myCustomFunction(2)">
+      <span class="button-inner">
+        <ion-icon id="mailIcon" name="mail"></ion-icon>Contact Us</span>
+    </button>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>
