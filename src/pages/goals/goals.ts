@@ -23,8 +23,6 @@ export class GoalsPage {
   timerVal;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-PenParentisAayan
-
 
   }
   ionViewDidLoad() {
@@ -59,4 +57,4 @@ goToCountdown(){
   }
 */
 
-}}
+}

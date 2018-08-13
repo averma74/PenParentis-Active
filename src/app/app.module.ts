@@ -10,20 +10,14 @@ import {SalonsPage} from '../pages/salons/salons';
 import {DonatePage} from '../pages/donate/donate';
 import {ResourcesPage} from '../pages/resources/resources';
 import {FacebookPage} from '../pages/facebook/facebook';
-
-import { AngularFireModule } from 'angularfire2';
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { AngularFireAuthModule} from "angularfire2/auth";
-import {BlankdocPage} from '../pages/blankdoc/blankdoc';
-import {TimerPage} from '../pages/timer/timer';
-
-
-
+import {InAppBrowser} from '@ionic-native/in-app-browser'
+import {LoginPage} from '../pages/login/login' ;
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {RegisterPage} from '../pages/register/register' ;
 import{Instagram} from "../pages/instagram/instagram";
+import {BlankdocPage} from "../pages/blankdoc/blankdoc";
+import {TimerPage} from "../pages/timer/timer"
 
 import { AngularFireAuthModule} from "angularfire2/auth"
 import { AngularFireModule } from 'angularfire2';
@@ -41,10 +35,10 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     ResourcesPage,
     FacebookPage,
     LoginPage,
-
+    Instagram,
     BlankdocPage,
+    //CountdownTimerPage,
     TimerPage
-
   ],
   imports: [
     BrowserModule,
@@ -63,12 +57,10 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     ResourcesPage,
     FacebookPage,
     LoginPage,
-
     BlankdocPage,
+    Instagram,
+    //CountdownTimerPage,
     TimerPage
-
-    
-  
   ],
   providers: [
     StatusBar,
@@ -78,5 +70,3 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
   ]
 })
 export class AppModule {}
-
-

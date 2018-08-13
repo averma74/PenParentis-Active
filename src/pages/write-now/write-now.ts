@@ -24,7 +24,7 @@ export class WriteNowPage {//start export class WriteNowPage
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
 
-
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad WriteNowPage');
 
