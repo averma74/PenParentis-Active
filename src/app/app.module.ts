@@ -10,6 +10,7 @@ import {SalonsPage} from '../pages/salons/salons';
 import {DonatePage} from '../pages/donate/donate';
 import {ResourcesPage} from '../pages/resources/resources';
 import {FacebookPage} from '../pages/facebook/facebook';
+
 import { AngularFireModule } from 'angularfire2';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
@@ -17,14 +18,21 @@ import { AngularFireAuthModule} from "angularfire2/auth";
 import {BlankdocPage} from '../pages/blankdoc/blankdoc';
 import {TimerPage} from '../pages/timer/timer';
 
+
+
 import { MyApp } from './app.component';
-//import { HomePage } from '../pages/home/home'; //Remove
+import { HomePage } from '../pages/home/home';
+import {RegisterPage} from '../pages/register/register' ;
+import{Instagram} from "../pages/instagram/instagram";
+
+import { AngularFireAuthModule} from "angularfire2/auth"
+import { AngularFireModule } from 'angularfire2';
 import { FIREBASE_CONFIG } from "./app.firebase.config";
+
 
 @NgModule({
   declarations: [
     MyApp,
-    //HomePage, //remove
     GoalsPage,
     WriteNowPage,
     MembershipPage,
@@ -33,8 +41,10 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     ResourcesPage,
     FacebookPage,
     LoginPage,
+
     BlankdocPage,
     TimerPage
+
   ],
   imports: [
     BrowserModule,
@@ -53,13 +63,20 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     ResourcesPage,
     FacebookPage,
     LoginPage,
+
     BlankdocPage,
     TimerPage
+
+    
+  
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    InAppBrowser
   ]
 })
 export class AppModule {}
+
+

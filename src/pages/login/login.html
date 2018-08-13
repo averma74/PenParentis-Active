@@ -1,25 +1,30 @@
-<ion-header>
 
-  <ion-navbar color="primary">
-    <ion-title>LOGIN</ion-title>
-  </ion-navbar>
+<ion-content class="content">
 
-</ion-header>
+ <img id="image" src="assets/imgs/cat.jpg" alt="writing cat">
 
+  <div id="border"></div>
 
-<ion-content padding>
+  <ion-list class="fields" no-border no-lines style="position: absolute; width: 275px;
+  top: 40%;
+  left: 8%;">
+      <ion-item >
+        <ion-input style="font-style: italic;" placeholder="E-mail" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Email Address</ion-label>
-      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-    </ion-item>
+      <ion-item >
+        <ion-input style="font-style: italic;" type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-    </ion-item>
+  </ion-list>
 
-    <button ion-button (click)= "login(user)">Login</button>
+  <div id="accountText">
+    <p>Don't have an account?</p>
     <button ion-button color="light" (click)= "register()">Register</button>
+  </div>
+
+  <div id="signUp">
+    <button style="font-size: 12px; color: royalblue;" (click)= "login(user)">Login</button>
+  </div>
 
 </ion-content>

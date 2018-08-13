@@ -1,23 +1,36 @@
-<ion-header>
+<ion-content class="content">
 
-  <ion-navbar>
-    <ion-title>Register</ion-title>
-  </ion-navbar>
+  <ion-fab>
+    <button id="backButton" ion-button icon-start clear padding>
+      <ion-icon name="arrow-back"></ion-icon>
 
-</ion-header>
+    </button>
+  </ion-fab>
 
-<ion-content padding>
-
-    <ion-item>
-        <ion-label floating>Email Address</ion-label>
-        <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-      </ion-item>
-  
+    <ion-list class="fields" no-border>
       <ion-item>
-        <ion-label floating>Password</ion-label>
+        <ion-label color="dimgrey" stacked>Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dimgrey" stacked>E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dimgrey" stacked>Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dimgrey" stacked>Confirm Password</ion-label>
         <ion-input type="password" [(ngModel)]="user.password"></ion-input>
       </ion-item>
 
-      <button ion-button (click)= "register(user)">Register</button>
+    </ion-list>
 
+  <div id="signUp">
+    <button style="font-size: 15px; color: royalblue;">Sign Up</button>
+  </div>
 </ion-content>

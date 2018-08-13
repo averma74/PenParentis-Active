@@ -6,13 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>donate</ion-title>
+  <ion-navbar color = "dark">
+    <ion-title>InAppBrowser</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-label floating>URL</ion-label>
+    <ion-input type="url" [(ngModel)]="url"></ion-input>
+  </ion-item>
+
+  <button ion-button block clear (click)="openWebpage(url)">Open Webpage</button>
 
 </ion-content>

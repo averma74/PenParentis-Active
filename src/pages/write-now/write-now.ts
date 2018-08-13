@@ -16,6 +16,7 @@ import {BlankdocPage} from '../blankdoc/blankdoc';
   selector: 'page-write-now',
   templateUrl: 'write-now.html',
 })
+
 export class WriteNowPage {//start export class WriteNowPage
   todos: string[] = [];
     todo: string;
@@ -23,10 +24,10 @@ export class WriteNowPage {//start export class WriteNowPage
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
 
-  }//end Constructor
 
-  ionViewDidLoad() {//start ionViewDidLoad
+  ionViewDidLoad() {
     console.log('ionViewDidLoad WriteNowPage');
+
   }//end ionViewDidLoad
   add() {
        this.todos.push(this.todo);
@@ -42,4 +43,5 @@ export class WriteNowPage {//start export class WriteNowPage
   this.navCtrl.push(BlankdocPage);
 }
 
-}//end export class WriteNowPage
+
+}
