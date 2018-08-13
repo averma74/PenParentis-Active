@@ -6,20 +6,33 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>WriteNow</ion-title>
-  </ion-navbar>
+  <ion-navbar color="royalblue">
+  <ion-title>WRITE NOW</ion-title>
+  <button ion-button (click)="add()" style="float:right">
+  <ion-icon ios="ios-add" md="md-add" style="color:white; float:right;"></ion-icon>
+</button>
+</ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<!--
-<button style="background-color:primary; color: white">Email</button>
--->
-<ion-label>
-  {{currentDate}}
-</ion-label>
+  <ion-item>
+            <ion-input [(ngModel)]="todo" placeholder="Insert some todo here here" type="text"></ion-input>
+        </ion-item>
 
+      <!--  <button ion-button full (click)="add()">ADD</button>-->
+
+        <ion-list>
+            <ion-item-sliding *ngFor="let t of todos">
+                <ion-item>
+                    {{t}}
+                </ion-item>
+
+              </ion-item-sliding>
+        <button ion-button color="danger" (click)="delete(t)">Delete</button>
+
+    </ion-list>
+<button ion-button (click)="openblankOpen()">Blank Doc</button>
 
 </ion-content>

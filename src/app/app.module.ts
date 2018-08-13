@@ -13,7 +13,9 @@ import {FacebookPage} from '../pages/facebook/facebook';
 import { AngularFireModule } from 'angularfire2';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
-import { AngularFireAuthModule} from "angularfire2/auth"
+import { AngularFireAuthModule} from "angularfire2/auth";
+import {BlankdocPage} from '../pages/blankdoc/blankdoc';
+import {TimerPage} from '../pages/timer/timer';
 
 import { MyApp } from './app.component';
 //import { HomePage } from '../pages/home/home'; //Remove
@@ -30,14 +32,16 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     DonatePage,
     ResourcesPage,
     FacebookPage,
-    LoginPage
+    LoginPage,
+    BlankdocPage,
+    TimerPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule
-  ], 
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -48,7 +52,9 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     DonatePage,
     ResourcesPage,
     FacebookPage,
-    LoginPage
+    LoginPage,
+    BlankdocPage,
+    TimerPage
   ],
   providers: [
     StatusBar,

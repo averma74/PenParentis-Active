@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval'
+import {BlankdocPage} from '../blankdoc/blankdoc';
 
 /**
  * Generated class for the WriteNowPage page.
@@ -14,8 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'write-now.html',
 })
 export class WriteNowPage {//start export class WriteNowPage
+  todos: string[] = [];
+    todo: string;
 
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
 
   }//end Constructor
@@ -23,5 +28,18 @@ export class WriteNowPage {//start export class WriteNowPage
   ionViewDidLoad() {//start ionViewDidLoad
     console.log('ionViewDidLoad WriteNowPage');
   }//end ionViewDidLoad
+  add() {
+       this.todos.push(this.todo);
+       this.todo = "";
+   }
+   delete(item) {
+       var index = this.todos.indexOf(item, 0);
+       if (index > -1) {
+           this.todos.splice(index, 1);
+       }
+   }
+  openblankOpen() {
+  this.navCtrl.push(BlankdocPage);
+}
 
 }//end export class WriteNowPage

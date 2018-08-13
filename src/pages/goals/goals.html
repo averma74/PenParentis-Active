@@ -23,11 +23,34 @@
   (ionInput)="onInput($event)"
   (ionCancel)="onCancel($event)">
 </ion-searchbar>
+<h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
+  <h3 style=" text-align: center;">STOPWATCH: {{timerVal}}</h3>
+  <br/>
+  <button ion-button (click)="startTimer()">Start Timer</button>
+  <button ion-button float-right (click)="stopTimer()">Stop Timer</button>
+  <hr>
   <h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
 
-  <ion-list>
 
+  <ion-card>
+  <ion-card-content class="goalText">
+    Write for 10 minutes
+    <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+  </ion-card-content>
+</ion-card>
 
-  </ion-list>
+<ion-card>
+<ion-card-content class="goalText">
+  Write for 30 minutes
+  <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+</ion-card-content>
+</ion-card>
+
+<ion-card>
+<ion-card-content class="goalText">
+  Write for 1 hour
+  <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+</ion-card-content>
+</ion-card>
 
 </ion-content>
