@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import {TimerPage} from '../timer/timer';
-//import { TimerComponent } from '../timer/timer';
+
+import {TimerPage} from '../timer/timer';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval'
 
@@ -22,9 +23,10 @@ export class GoalsPage {
   timerVal;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+PenParentisAayan
+
 
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad GoalsPage');
   }
@@ -36,10 +38,19 @@ export class GoalsPage {
 
   }//end startTimer
   stopTimer(){
-    this.timerVar.unsubscribe()
-  }//end stopTimer
-  goToCountdown(){
-    //this.navCtrl.push(TimerPage,{
+
+  this.timerVar.unsubscribe()
+}//end stopTimer
+goToCountdown(){
+     this.navCtrl.push(TimerPage,{
+
+     })
+   }
+   openTimerPage(){
+
+     this.navCtrl.push(TimerPage);
+   }
+
 
   /*  })
   }

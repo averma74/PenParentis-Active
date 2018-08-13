@@ -22,68 +22,43 @@
 
 <ion-content>
 
-  <ion-searchbar id="searchbar"
-    [(ngModel)]="myInput"
-    [showCancelButton]="shouldShowCancel"
-    (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)" placeholder="Search Goals...">
+  <ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+<h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
 
-
-  </ion-searchbar>
-  <h6 text-center style="color: #6d84d6; font-size: 20px; padding-top:0px;">Daily Writing Challenge</h6>
-  <!--
   <h3 style=" text-align: center;">STOPWATCH: {{timerVal}}</h3>
   <br/>
   <button ion-button (click)="startTimer()">Start Timer</button>
   <button ion-button float-right (click)="stopTimer()">Stop Timer</button>
-  <hr> -->
 
-  <!-- Countdown timer
-
-    <h3 style="text-align:center;">COUNTDOWN:</h3>
-    <br/>
-    <button ion-button>Start</button>
-    <button ion-button float-right>Stop</button>
-    <br>
-  -->
-
-  <ion-list>
-   <!-- <ion-item class="goalText">
-      Write for 10 minutes
-      <button class="goalButtons" ion-button (click)="openTimerPage()">Go!</button>
-    </ion-item>-->
-
-    <ion-item>
-      <ion-label>Write for 10 minutes</ion-label>
-      <ion-checkbox [(ngModel)]="tenmin"></ion-checkbox>
-      <button class="goalButtons" ion-button item-right (click)="openTimerPage()">Go!</button>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Write for 30 min</ion-label>
-      <ion-checkbox [(ngModel)]="thirtymin"></ion-checkbox>
-      <button class="goalButtons" ion-button item-right (click)="openTimerPage()">Go!</button>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Write for 1 hour</ion-label> <button class="goalButtons" ion-button (click)="openTimerPage()">Go!</button>
-      <ion-checkbox [(ngModel)]="onehour" ></ion-checkbox>
-      <button class="goalButtons" ion-button item-right (click)="openTimerPage()">Go!</button>
-    </ion-item>
-
-    <!--<ion-item class="goalText">
-      Write for 30 minutes
-      <button class="goalButtons" ion-button (click)="openTimerPage()">Go!</button>
-    </ion-item>
+  <hr>
+  <h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
+  
 
 
+  <ion-card>
+  <ion-card-content class="goalText">
+    Write for 10 minutes
+    <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+  </ion-card-content>
+</ion-card>
 
-    <ion-item class="goalText">
-      Write for 1 hour
-      <button class="goalButtons" ion-button (click)="openTimerPage()">Go!</button>
-    </ion-item> -->
+<ion-card>
+<ion-card-content class="goalText">
+  Write for 30 minutes
+  <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+</ion-card-content>
+</ion-card>
 
-
-  </ion-list>
+<ion-card>
+<ion-card-content class="goalText">
+  Write for 1 hour
+  <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+</ion-card-content>
+</ion-card>
 
 </ion-content>
