@@ -10,6 +10,8 @@ import {SalonsPage} from '../salons/salons';
 import {DonatePage} from '../donate/donate';
 import {ResourcesPage} from '../resources/resources';
 import {FacebookPage} from '../facebook/facebook';
+import {TwitterPage} from "../twitter/twitter";
+import {InstagramPage} from "../instagram/instagram";
 
 @IonicPage()
 @Component({
@@ -40,10 +42,18 @@ export class HomePage {
 
     })
   }
+  // goToSalons(){
+  //   // const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
+  //   this.navCtrl.push(SalonsPage, {
+
+  //   })
+  // }
+
   goToSalons(){
     const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
 
   }
+  
   goToDonate(){
     this.navCtrl.push(DonatePage, {
 
@@ -56,6 +66,18 @@ export class HomePage {
   }
   goToFacebook(){
     this.navCtrl.push(FacebookPage, {
+
+    })
+  }
+
+  goToTwitter(){
+    this.navCtrl.push(TwitterPage, {
+
+    })
+  }
+
+  goToInstagram(){
+    this.navCtrl.push(InstagramPage, {
 
     })
   }

@@ -10,12 +10,13 @@ import {SalonsPage} from '../pages/salons/salons';
 import {DonatePage} from '../pages/donate/donate';
 import {ResourcesPage} from '../pages/resources/resources';
 import {FacebookPage} from '../pages/facebook/facebook';
+import {TwitterPage} from "../pages/twitter/twitter";
 import {InAppBrowser} from '@ionic-native/in-app-browser'
 import {LoginPage} from '../pages/login/login' ;
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {RegisterPage} from '../pages/register/register' ;
-import{Instagram} from "../pages/instagram/instagram";
+import{InstagramPage} from "../pages/instagram/instagram";
 import {BlankdocPage} from "../pages/blankdoc/blankdoc";
 import {TimerPage} from "../pages/timer/timer"
 
@@ -35,7 +36,8 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     ResourcesPage,
     FacebookPage,
     LoginPage,
-    Instagram,
+    InstagramPage,
+    TwitterPage,
     BlankdocPage,
     //CountdownTimerPage,
     TimerPage
@@ -58,7 +60,8 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     FacebookPage,
     LoginPage,
     BlankdocPage,
-    Instagram,
+    InstagramPage,
+    TwitterPage,
     //CountdownTimerPage,
     TimerPage
   ],

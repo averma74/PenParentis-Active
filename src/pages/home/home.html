@@ -51,7 +51,6 @@ position: absolute; top: 50px; right: 10px;">
 
   <!-- Salons button -->
   <div class ="Salons" style="padding-left: 20px; padding-top: 10px">
-   <!-- <a href ="http://www.penparentis.org/calendar/" target="_self" location="yes">-->
     <button ion-button color="white" id="salonButton" style="width:80px; height:80px;" (click)="goToSalons()">
       <input type="image" id="salonsImg" src="assets/imgs/salons.png" style="height:55px"/>
     </button>
@@ -60,11 +59,11 @@ position: absolute; top: 50px; right: 10px;">
   </div>
   <!-- Donate button -->
   <div class ="Donate" style="padding-left:10px; padding-top: 10px">
-    <a href="https://www.paypal.com/donate/?token=ogHybF1IvV2OA7L0O2CqzZyPPx43cYewg9vPf9eva3u5OHxZ_iiBtDC4EgCK6BG-FE9wHG&country.x=US&locale.x=US" target="_blank">
-      <button ion-button color="white" id="donateButton" style="width:80px; height:80px;"  >
+
+      <button ion-button color="white" id="donateButton" style="width:80px; height:80px;" (click)="goToDonate()" >
         <input type="image" id="donateImg" src="assets/imgs/donate.png" style="height:55px;"/>
       </button>
-    </a>
+
   <span class="inner-pre">Donate</span>
   </div>
 
@@ -106,26 +105,20 @@ position: absolute; top: 50px; right: 10px;">
   </div>
   <!-- Twitter -->
   <div class="Twitter" style="padding-left:20px; padding-top:0px">
-    <a class="twitter-timeline" href="https://twitter.com/PenParentis" data-prefetch="true" data-widget-id="604257654391767041">
 
-
-    <button ion-button color="white" id="twitterButton" style="width:80px; height:80px">
+    <button ion-button color="white" id="twitterButton" style="width:80px; height:80px" (click)="goToTwitter()">
       <input type="image" id="twitterImg" src="assets/imgs/twitter.png" style="height:55px; align-content: center;" />
     </button>
-    </a>
-    <script>
-      !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
-    </script>
+
     <span class="inner-pre">Twitter</span>
   </div>
   <!-- Instagram -->
   <div class="Instagram" style="padding-left:10px; padding-top:0px">
-    <a href="#" onclick="window.open('http://google.com', '_blank', 'location=no');">
-    <button ion-button color="white" id="igButton" style="width:80px; height:80px" (click)="openWebpage()">
+
+    <button ion-button color="white" id="igButton" style="width:80px; height:80px" (click)="goToInstagram()">
       <input type="image" id="igImg" src="assets/imgs/ig.png" style="height:60px" />
     </button>
     <span class="inner-pre">Instagram</span>
-    </a>
   </div>
 </div>
 <div class="row" style="padding-left:50px">
