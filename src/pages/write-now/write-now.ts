@@ -39,7 +39,7 @@ export class WriteNowPage {//start export class WriteNowPage
            this.todos.splice(index, 1);
        }
    }
-  openblankOpen() {
+  openblankDoc() {
   this.navCtrl.push(BlankdocPage);
 }
 

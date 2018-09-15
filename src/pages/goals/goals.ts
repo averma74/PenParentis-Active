@@ -5,6 +5,7 @@ import {TimerPage} from '../timer/timer';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval'
+import {BlankdocPage} from "../blankdoc/blankdoc";
 
 /**
  * Generated class for the GoalsPage page.
@@ -49,6 +50,11 @@ goToCountdown(){
      this.navCtrl.push(TimerPage);
    }
 
+  openblankDoc() {
+    this.navCtrl.push(BlankdocPage);
+  }
+
+  loadProgress="75";
 
   /*  })
   }

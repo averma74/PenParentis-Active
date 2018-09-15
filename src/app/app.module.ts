@@ -18,7 +18,8 @@ import { HomePage } from '../pages/home/home';
 import {RegisterPage} from '../pages/register/register' ;
 import{InstagramPage} from "../pages/instagram/instagram";
 import {BlankdocPage} from "../pages/blankdoc/blankdoc";
-import {TimerPage} from "../pages/timer/timer"
+import {TimerPage} from "../pages/timer/timer";
+import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
 
 import { AngularFireAuthModule} from "angularfire2/auth"
 import { AngularFireModule } from 'angularfire2';
@@ -40,7 +41,8 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     TwitterPage,
     BlankdocPage,
     //CountdownTimerPage,
-    TimerPage
+    TimerPage,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
