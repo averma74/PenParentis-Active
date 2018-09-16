@@ -14,7 +14,7 @@
 
     </ion-buttons>
     <!--<ion-title text-center>Goals</ion-title>-->
-    <div class="goalsWords" style="font-weight:bold; padding-left: 37.5%; font-size: large; color: white">Goals</div>
+    <div class="goalsWords" style="font-family: 'Courier New'; padding-left: 35%; font-size: 20px; color: white">Goals</div>
   </ion-navbar>
 
 </ion-header>
@@ -28,37 +28,28 @@
   (ionInput)="onInput($event)"
   (ionCancel)="onCancel($event)">
 </ion-searchbar>
-<h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
+<!--<h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
 
   <h3 style=" text-align: center;">STOPWATCH: {{timerVal}}</h3>
   <br/>
   <button ion-button (click)="startTimer()">Start Timer</button>
   <button ion-button float-right (click)="stopTimer()">Stop Timer</button>
 
-  <hr>
+  <hr> -->
+
   <h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
   
 
 
   <ion-card>
-  <ion-card-content class="goalText">
+  <ion-card-content class="goalText" style="font-size: 17px;">
     Write for 10 minutes
-    <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
+    <button class="goalButtons" ion-button (click)="openblankDoc()">Go!</button>
   </ion-card-content>
 </ion-card>
 
-<ion-card>
-<ion-card-content class="goalText">
-  Write for 30 minutes
-  <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
-</ion-card-content>
-</ion-card>
+  <h6 id="progressText" style="font-family: Arial; font-size: 13px;">Progress to Next Milestone</h6>
 
-<ion-card>
-<ion-card-content class="goalText">
-  Write for 1 hour
-  <button class="goalButtons" ion-button round (click)="openTimerPage()">Go!</button>
-</ion-card-content>
-</ion-card>
+<progress-bar id="progressbar" [progress]="loadProgress"></progress-bar>
 
 </ion-content>

@@ -3,11 +3,25 @@
   background-color: green;
   float: right;
   border: white;
-  border-radius: 60px;
-  padding-top: 10px;
+  border-radius: 100px;
+  position: absolute;
+  right: 10%;
+  top: 20.5%;
 }
 .goalText {
   color: #A9A9A9;
   text-align: left;
-  padding-top: 10px;
+  padding-top: 20px;
+}
+
+#progressbar{
+  position: relative;
+  top: 60%;
+}
+
+#progressText{
+  position: absolute;
+  top: 87%;
+  padding-left: 10px;
+  color: gray;
 }
