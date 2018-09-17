@@ -13,3 +13,18 @@ page-write-now {
   padding-top: 3.5%;
   //padding-bottom: 100%;
 }
+
+.button-inner{
+  justify-content: center;
+}
+
+#todoInput{
+  border-radius: 10px;
+  border: 1.5px solid #488aff;
+  margin-bottom: 5%;
+}
+
+.todoEditButtons{
+  justify-content: center;
+  align-content: center;
+}

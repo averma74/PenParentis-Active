@@ -21,24 +21,34 @@
 
 <ion-content padding>
 
-  <ion-item>
-            <ion-input [(ngModel)]="todo" placeholder="Insert some todo here here" type="text"></ion-input>
-        </ion-item>
+  <ion-item id="todoInput">
+    <ion-label color="primary" stacked>To Do List</ion-label>
+    <ion-input [(ngModel)]="todo" placeholder="Write your ToDo here!" type="text"></ion-input>
+  </ion-item>
 
-      <!--  <button ion-button full (click)="add()">ADD</button>-->
+  <!-- <button ion-button full (click)="add()">ADD</button> -->
 
-        <ion-list>
-            <ion-item-sliding *ngFor="let t of todos">
-                <ion-item>
-                    {{t}}
-                </ion-item>
+  <ion-list>
 
-              </ion-item-sliding>
-        <button ion-button color="danger" (click)="delete(t)">Delete</button>
+    <ion-item-sliding *ngFor="let t of todos">
+      <ion-item>
+        {{t}}
+      </ion-item>
+    </ion-item-sliding>
 
-    </ion-list>
-<button ion-button (click)="openblankDoc()">Blank Doc</button>
+    <ion-row>
+      <ion-col width-50 style="text-align: center">
+        <button ion-button class="todoEditButtons" color="danger" (click)="delete()">Delete</button>
+      </ion-col>
+      <ion-col width-50 style="text-align: center">
+        <button ion-button class="todoEditButtons" color="primary" (click)="save()">Save</button>
+      </ion-col>
+    </ion-row>
 
+  </ion-list>
 
-<button style="background-color:primary; color: white">Email</button>
+  <button ion-button (click)="openblankDoc()">New Blank Doc</button>
+
+  <button ion-button color="light" style="color: black">Email to myself</button>
+
 </ion-content>

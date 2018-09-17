@@ -19,7 +19,7 @@ import {BlankdocPage} from '../blankdoc/blankdoc';
 
 export class WriteNowPage {//start export class WriteNowPage
   todos: string[] = [];
-    todo: string;
+  todo: string;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
@@ -29,19 +29,31 @@ export class WriteNowPage {//start export class WriteNowPage
     console.log('ionViewDidLoad WriteNowPage');
 
   }//end ionViewDidLoad
+
+  /*-----------------------------------------------------------------------------*/
+
+  //Add a new todo field
   add() {
        this.todos.push(this.todo);
        this.todo = "";
-   }
-   delete(item) {
-       var index = this.todos.indexOf(item, 0);
-       if (index > -1) {
-           this.todos.splice(index, 1);
-       }
-   }
+  }
+
+  //Delete latest todo
+  delete() {
+    if(this.todos.length != 0){
+      this.todos.splice(-1, 1);
+    }
+  }
+
+  save(){
+    this.todos.push(this.todo);
+    this.todo = "";
+  }
+
+  //Open BlankDocPage
   openblankDoc() {
   this.navCtrl.push(BlankdocPage);
-}
+  }
 
 
 }
