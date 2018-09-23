@@ -47,6 +47,12 @@
 
   </ion-list>
 
+  <ion-list>
+    <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">
+      {{ note.title }}
+    </button>
+  </ion-list>
+
   <button ion-button (click)="openblankDoc()">New Blank Doc</button>
 
   <button ion-button color="light" style="color: black">Email to myself</button>

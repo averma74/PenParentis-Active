@@ -20,11 +20,14 @@ import{InstagramPage} from "../pages/instagram/instagram";
 import {BlankdocPage} from "../pages/blankdoc/blankdoc";
 import {TimerPage} from "../pages/timer/timer";
 import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
+import {IonicStorageModule} from "@ionic/storage";
 
 import { AngularFireAuthModule} from "angularfire2/auth"
 import { AngularFireModule } from 'angularfire2';
 import { FIREBASE_CONFIG } from "./app.firebase.config";
-
+import { NoteService } from '../providers/note-service/note-service';
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ViewNotePage} from "../pages/view-note/view-note";
 
 @NgModule({
   declarations: [
@@ -42,13 +45,17 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     BlankdocPage,
     //CountdownTimerPage,
     TimerPage,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ViewNotePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    IonicStorageModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,13 +72,15 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     InstagramPage,
     TwitterPage,
     //CountdownTimerPage,
-    TimerPage
+    TimerPage,
+    ViewNotePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    InAppBrowser
+    InAppBrowser,
+    NoteService
   ]
 })
 export class AppModule {}
