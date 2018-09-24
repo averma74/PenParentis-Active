@@ -42,16 +42,11 @@ export class HomePage {
 
     })
   }
-  // goToSalons(){
-  //   // const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
-  //   this.navCtrl.push(SalonsPage, {
-
-  //   })
-  // }
 
   goToSalons(){
-    const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
+    this.navCtrl.push(SalonsPage, {
 
+    })
   }
   
   goToDonate(){

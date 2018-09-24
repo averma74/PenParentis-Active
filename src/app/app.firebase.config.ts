@@ -1,8 +1,8 @@
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyClh9OSwhtFFJ9kRdlLn2niq4_Y9cwB9nY",
-    authDomain: "penparentis-b06bf.firebaseapp.com",
-    databaseURL: "https://penparentis-b06bf.firebaseio.com",
-    projectId: "penparentis-b06bf",
-    storageBucket: "penparentis-b06bf.appspot.com",
-    messagingSenderId: "59165771720"
+    apiKey: "AIzaSyCgQUzyI-nNGxL0KAI8Ddp3RRZozWWZ15g",
+    authDomain: "penparentis-2eb04.firebaseapp.com",
+    databaseURL: "https://penparentis-2eb04.firebaseio.com",
+    projectId: "penparentis-2eb04",
+    storageBucket: "penparentis-2eb04.appspot.com",
+    messagingSenderId: "765323793447",
 }
