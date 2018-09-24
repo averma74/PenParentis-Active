@@ -98,7 +98,7 @@ position: absolute; top: 50px; right: 10px;">
 <div class="row">
   <!-- Facebook -->
   <div class="Facebook" style="padding-left:35px; padding-top:0px; padding-bottom: 0px;">
-    <button ion-button color="white" id="fbButton" style="width:80px; height:80px" (click)="goToFacebook()">
+    <button ion-button color="white" id="fbButton" style="width:80px; height:80px" (click)="openWithBrowserTab('https://www.facebook.com/PenParentis/')">
       <input type="image" id="fbImg" src="assets/imgs/fb.png" style="height:55px"/>
     </button>
     <span class="inner-pre">Facebook</span>
@@ -106,7 +106,7 @@ position: absolute; top: 50px; right: 10px;">
   <!-- Twitter -->
   <div class="Twitter" style="padding-left:20px; padding-top:0px">
 
-    <button ion-button color="white" id="twitterButton" style="width:80px; height:80px" (click)="goToTwitter()">
+    <button ion-button color="white" id="twitterButton" style="width:80px; height:80px" (click)="openWithBrowserTab('https://twitter.com/PenParentis')">
       <input type="image" id="twitterImg" src="assets/imgs/twitter.png" style="height:55px; align-content: center;" />
     </button>
 
@@ -115,7 +115,7 @@ position: absolute; top: 50px; right: 10px;">
   <!-- Instagram -->
   <div class="Instagram" style="padding-left:10px; padding-top:0px">
 
-    <button ion-button color="white" id="igButton" style="width:80px; height:80px" (click)="goToInstagram()">
+    <button ion-button color="white" id="igButton" style="width:80px; height:80px" (click)="openWithBrowserTab('https://www.instagram.com/penparentis/')">
       <input type="image" id="igImg" src="assets/imgs/ig.png" style="height:60px" />
     </button>
     <span class="inner-pre">Instagram</span>

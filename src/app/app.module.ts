@@ -11,7 +11,6 @@ import {DonatePage} from '../pages/donate/donate';
 import {ResourcesPage} from '../pages/resources/resources';
 import {FacebookPage} from '../pages/facebook/facebook';
 import {TwitterPage} from "../pages/twitter/twitter";
-import {InAppBrowser} from '@ionic-native/in-app-browser'
 import {LoginPage} from '../pages/login/login' ;
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -28,6 +27,8 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
 import { NoteService } from '../providers/note-service/note-service';
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ViewNotePage} from "../pages/view-note/view-note";
+import { InAppBrowser} from "@ionic-native/in-app-browser";
+import { BrowserTab } from "@ionic-native/browser-tab";
 
 @NgModule({
   declarations: [
@@ -78,9 +79,10 @@ import {ViewNotePage} from "../pages/view-note/view-note";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NoteService,
     InAppBrowser,
-    NoteService
+    BrowserTab,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
