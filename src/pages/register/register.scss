@@ -1,20 +1,45 @@
-.fields{
-  position: absolute;
-  top: 8%;
-  left: 0%;
-  width: 100%;
+.register-page{
+  background-color: #6d84d6;
+}
+
+ion-item{
+  border: 0;
+}
+
+ion-item.fixInput{
+  height: 0;
 }
 
 #backButton{
   position: relative;
-  color: dimgrey;
+  color: black;
   background-color: transparent;
   left: 0%;
   top: 20%;
 }
 
-#signUp{
-  position: absolute;
-  top: 60%;
-  left: 37%;
+.register-box{
+  padding: 10px 10px 0px 10px;
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1.5px solid;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.register-col {
+  margin: 0px 16px 0px 16px;
+  padding-bottom: 20px;
+}
+
+.register-btn {
+  background: #488aff;
+  border-radius: 30px !important;
+}
+
+.register-text{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }

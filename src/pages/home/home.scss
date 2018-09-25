@@ -1,5 +1,6 @@
 .no-scroll .scroll-content{
   overflow: hidden;
+  background-color: #6d84d6;
 }
 
 .slider {
@@ -33,15 +34,17 @@
   font-family: "Avenir Next";
   padding-top: 20px;
   padding-bottom: 15px;
+  align-items: center;
+  text-align: center;
 }
 
 .scroll-content {
   display: flex;
   flex-direction: column;
+}
 
-  ion-slides {
-    display: flex;
-  }
+ion-slides {
+  display: flex;
 }
 
 

@@ -18,9 +18,9 @@
 }
 
 ion-row{
-  align-items: center;
-  text-align: center;
-}
+   align-items: center;
+   text-align: center;
+ }
 
 ion-item{
   border: 0;
@@ -56,6 +56,16 @@ ion-input{
 .submit-btn {
   background: #488aff;
   border-radius: 30px !important;
+}
+
+.signup-btn {
+  border-radius: 30px !important;
+}
+
+.login-text{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 

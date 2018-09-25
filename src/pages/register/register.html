@@ -1,36 +1,48 @@
-<ion-content class="content">
+<ion-content class="register-page">
 
   <ion-fab>
     <button id="backButton"  ion-button icon-start clear padding navPop>
       <ion-icon name="arrow-back"></ion-icon>
-
     </button>
   </ion-fab>
 
-    <ion-list class="fields" no-border>
-      <ion-item>
-        <ion-label color="dimgrey" stacked>Name</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
+  <div class="register-box">
+    <ion-row>
+      <ion-col class="register-text">
+        <h2 class="register-text">Register</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
 
-      <ion-item>
-        <ion-label color="dimgrey" stacked>E-mail</ion-label>
-        <ion-input type="email" [(ngModel)]="user.email"></ion-input>
-      </ion-item>
+        <ion-list inset>
+          <ion-item>
+            <ion-input type="text" placeholder="Enter your name here"></ion-input>
+          </ion-item>
 
-      <ion-item>
-        <ion-label color="dimgrey" stacked>Password</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
+          <ion-item>
+            <ion-input type="email" placeholder="Enter your email here" [(ngModel)]="user.email"></ion-input>
+          </ion-item>
 
-      <ion-item>
-        <ion-label color="dimgrey" stacked>Confirm Password</ion-label>
-        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-      </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Enter your password here"></ion-input>
+          </ion-item>
 
-    </ion-list>
+          <ion-item>
+            <ion-input type="password" placeholder="Please confirm your password" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
 
-  <div id="signUp">
-    <button style="font-size: 15px; color: royalblue;">Sign Up</button>
+          <ion-item class="fixInput"></ion-item> <!-- This fixes the underline issue for the input fields -->
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="register-col">
+        <button ion-button class="register-btn" full type="submit">Register</button>
+      </ion-col>
+    </ion-row>
   </div>
+
 </ion-content>
