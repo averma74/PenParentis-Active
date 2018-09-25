@@ -91,19 +91,6 @@ export class HomePage {
     }
   }
 
-
-  public openWithInAppBrowser(url: string){
-    let target = "_blank";
-    this.inAppBrowser.create(url, target);
-  }
-
-  public openWithCordovaBrowser(url: string){
-    let target="_self";
-    this.inAppBrowser.create(url, target);
-  }
-
-
-
   slider=[
     {
       image:"assets/imgs/image1.png"
