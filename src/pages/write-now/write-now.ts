@@ -32,23 +32,6 @@ export class WriteNowPage {//start export class WriteNowPage
 
   /*-----------------------------------------------------------------------------*/
 
-  //Add a new todo field
-  add() {
-       this.todos.push(this.todo);
-       this.todo = "";
-  }
-
-  //Delete latest todo
-  delete() {
-    if(this.todos.length != 0){
-      this.todos.splice(-1, 1);
-    }
-  }
-
-  save(){
-    this.todos.push(this.todo);
-    this.todo = "";
-  }
 
   //Open BlankDocPage
   openblankDoc() {

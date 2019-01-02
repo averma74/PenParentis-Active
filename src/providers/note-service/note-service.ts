@@ -13,10 +13,14 @@ export class NoteService {
   constructor(public storage: Storage) {
   }
 
+
+
   saveNote(note: Note){
     note.createDate = Date.now();
     this.notes.push(note);
     this.storage.set('notes', this.notes);
+    let count = 0;
+    count++;
   }
 
   getAllNotes(){

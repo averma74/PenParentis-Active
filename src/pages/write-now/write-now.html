@@ -7,11 +7,11 @@
 <ion-header>
 
   <ion-navbar color="blue1">
-    <div class="writeNowWords" style="font-weight:bold; padding-left: 23%; top: 20%;font-size: large; color: white">Write Now</div>
+    <div class="writeNowWords" style="font-family:Courier; padding-left: 23%; top: 20%;font-size: large; color: white">Write Now</div>
   <!--<ion-title>WRITE NOW</ion-title>-->
   <div class="addButton">
-    <button ion-button (click)="add()" style="float:right">
-  <ion-icon ios="ios-add" md="md-add" style="color:white; float:right;"></ion-icon>
+    <button ion-button (click)="openblankDoc()" style="background-color: transparent; float:right">
+  <ion-icon ios="ios-add" md="md-add" style="color:white; float:right; font-size: 25px"></ion-icon>
 </button>
   </div>
 </ion-navbar>
@@ -21,40 +21,16 @@
 
 <ion-content padding>
 
-  <ion-item id="todoInput">
-    <ion-label color="primary" stacked>To Do List</ion-label>
-    <ion-input [(ngModel)]="todo" placeholder="Write your ToDo here!" type="text"></ion-input>
-  </ion-item>
-
-  <!-- <button ion-button full (click)="add()">ADD</button> -->
-
-  <ion-list>
-
-    <ion-item-sliding *ngFor="let t of todos">
-      <ion-item>
-        {{t}}
-      </ion-item>
-    </ion-item-sliding>
-
-    <ion-row>
-      <ion-col width-50 style="text-align: center">
-        <button ion-button class="todoEditButtons" color="danger" (click)="delete()">Delete</button>
-      </ion-col>
-      <ion-col width-50 style="text-align: center">
-        <button ion-button class="todoEditButtons" color="primary" (click)="save()">Save</button>
-      </ion-col>
-    </ion-row>
-
-  </ion-list>
 
   <ion-list>
     <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">
       {{ note.title }}
     </button>
+    <div *ngIf="(notes | async)?.length > 0; else text"></div>
+    <ng-template #text> <label class="displayText">No notes to display.</label></ng-template>
   </ion-list>
 
-  <button ion-button (click)="openblankDoc()">New Blank Doc</button>
 
-  <button ion-button color="light" style="color: black">Email to myself</button>
+
 
 </ion-content>

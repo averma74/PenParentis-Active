@@ -18,6 +18,7 @@ import { BlankdocPage } from "../pages/blankdoc/blankdoc";
 import { TimerPage } from "../pages/timer/timer";
 import { ProgressBarComponent } from "../components/progress-bar/progress-bar";
 import { IonicStorageModule } from "@ionic/storage";
+import {NewgoalPageModule} from "../pages/newgoal/newgoal.module";
 
 import { AngularFireAuthModule} from "angularfire2/auth"
 import { AngularFireModule } from 'angularfire2';
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ViewNotePage} from "../pages/view-note/view-note";
 import { InAppBrowser} from "@ionic-native/in-app-browser";
 import { BrowserTab } from "@ionic-native/browser-tab";
+import {NewgoalPage} from "../pages/newgoal/newgoal";
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { BrowserTab } from "@ionic-native/browser-tab";
     BlankdocPage,
     TimerPage,
     ProgressBarComponent,
-    ViewNotePage
+    ViewNotePage,
+    NewgoalPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { BrowserTab } from "@ionic-native/browser-tab";
     InstagramPage,
     TwitterPage,
     TimerPage,
-    ViewNotePage
+    ViewNotePage,
+    NewgoalPage
   ],
   providers: [
     StatusBar,
