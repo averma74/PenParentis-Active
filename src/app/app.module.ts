@@ -29,6 +29,7 @@ import {ViewNotePage} from "../pages/view-note/view-note";
 import { InAppBrowser} from "@ionic-native/in-app-browser";
 import { BrowserTab } from "@ionic-native/browser-tab";
 import {NewgoalPage} from "../pages/newgoal/newgoal";
+import {Autosize} from "../directives/directives.module";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {NewgoalPage} from "../pages/newgoal/newgoal";
     TimerPage,
     ProgressBarComponent,
     ViewNotePage,
-    NewgoalPage
+    NewgoalPage,
+    Autosize
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,7 @@ import {NewgoalPage} from "../pages/newgoal/newgoal";
     AngularFireAuthModule,
     IonicStorageModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

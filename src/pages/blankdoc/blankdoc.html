@@ -41,9 +41,9 @@
 
     <ion-item text-wrap>
       <ion-label>Note</ion-label>
-      <ion-textarea
-                type="text" name="content" formControlName="content" required></ion-textarea>
-        <div class="alert" *ngIf="!formGroup.controls['content'].valid &&
+      <ion-textarea autosize
+        type="text" name="content" formControlName="content" required></ion-textarea>
+      <div class="alert" *ngIf="!formGroup.controls['content'].valid &&
       formGroup.controls['content'].touched">{{ contentAlert }}</div>
     </ion-item>
 

@@ -56,6 +56,8 @@ goToCountdown(){
     this.navCtrl.push(BlankdocPage);
   }
 
+
+
   loadProgress="75";
 
   /*  })

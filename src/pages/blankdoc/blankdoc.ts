@@ -16,6 +16,8 @@ export class BlankdocPage {
   title: string = '';
   content: string = '';
 
+  dummyText: string='Type more';
+
   public inputVal:string;
   constructor(public navCtrl: NavController,
               private noteService: NoteService) {
@@ -32,6 +34,7 @@ export class BlankdocPage {
       this.noteService.saveNote(note);
       this.navCtrl.pop();
   }
+
 
 
 
