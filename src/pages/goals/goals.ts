@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import {TimerPage} from '../timer/timer';
-
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval'
 import {BlankdocPage} from "../blankdoc/blankdoc";
 import {NewgoalPage} from "../newgoal/newgoal";
@@ -22,8 +19,6 @@ import {NewgoalPage} from "../newgoal/newgoal";
   templateUrl: 'goals.html',
 })
 export class GoalsPage {
-  timerVar;
-  timerVal;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -31,26 +26,14 @@ export class GoalsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GoalsPage');
   }
-  startTimer(){
-    this.timerVar = Observable.interval(1000).subscribe(x => {
-      console.log(x)
-      this.timerVal = x;
-    })
 
-  }//end startTimer
-  stopTimer(){
 
-  this.timerVar.unsubscribe()
-}//end stopTimer
-goToCountdown(){
-     this.navCtrl.push(TimerPage,{
+  startTime(){
+    setTimeout(function(){
+      alert('you wrote for 10 seconds!');
+    }, 10000)
+  }
 
-     })
-   }
-   openTimerPage(){
-
-     this.navCtrl.push(TimerPage);
-   }
 
   openblankDoc() {
     this.navCtrl.push(BlankdocPage);
@@ -60,12 +43,7 @@ goToCountdown(){
 
   loadProgress="75";
 
-  /*  })
-  }
-  openTimerPage(){
-    //this.navCtrl.push(TimerPage);
-  }
-*/
+
 
   gotoNewGoalPage(){
     this.navCtrl.push(NewgoalPage);
