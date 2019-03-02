@@ -1,29 +1,16 @@
+.login-page{
+  background-color: #6d84d6;
+}
+
 #image{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  width: 50%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 40px;
+  width: 60%;
   top: 25%;
-}
-
-#border{
-  position:absolute;
-  width: 300px;
-  height: 100px;
-  top: 39%;
-  left: 5%;
-  border: 1.5px solid;
-  color: grey;
+  border: #000000 2px solid;
   border-radius: 15px;
-}
-
-
-.fields{
-  position: absolute;
-  width: 275px;
-  top: 40%;
-  left: 8%;
 }
 
 #logIn{
@@ -32,17 +19,55 @@
   left: 37%;
 }
 
-#signUp{
-  position: absolute;
-  top: 76%;
-  left: 38%;
+ion-row{
+   align-items: center;
+   text-align: center;
+ }
+
+ion-item{
+  border: 0;
 }
 
-#accountText{
-  position: absolute;
-  top: 70%;
-  left: 24%;
-  color: gray;
+ion-item.fixInput{
+  height: 0;
+}
+
+.item{
+  min-height: 0rem;
+}
+
+ion-input{
+  border: 0;
+}
+
+.login-box{
+  padding: 10px 10px 0px 10px;
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1.5px solid;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.signup-col {
+  margin: 0px 16px 0px 16px;
+  padding-bottom: 20px;
+}
+
+.submit-btn {
+  background: #488aff;
+  border-radius: 30px !important;
+}
+
+.signup-btn {
+  border-radius: 30px !important;
+}
+
+.login-text{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 

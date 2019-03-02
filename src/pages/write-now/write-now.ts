@@ -3,13 +3,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval'
 import {BlankdocPage} from '../blankdoc/blankdoc';
-
-/**
- * Generated class for the WriteNowPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {Storage} from "@ionic/storage";
+import {NoteService} from "../../providers/note-service/note-service";
+import { Note } from "../../models/note.model";
+import {ViewNotePage} from "../view-note/view-note";
 
 @IonicPage()
 @Component({
@@ -19,29 +16,38 @@ import {BlankdocPage} from '../blankdoc/blankdoc';
 
 export class WriteNowPage {//start export class WriteNowPage
   todos: string[] = [];
-    todo: string;
+  todo: string;
 
+  private notes: Promise<Note[]>;
+  private note: Note;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private noteService: NoteService) {//start Constructor
 
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad WriteNowPage');
 
-  }//end ionViewDidLoad
-  add() {
-       this.todos.push(this.todo);
-       this.todo = "";
-   }
-   delete(item) {
-       var index = this.todos.indexOf(item, 0);
-       if (index > -1) {
-           this.todos.splice(index, 1);
-       }
-   }
+  ionViewWillEnter(){
+    this.notes = this.getAllNotes();
+  }
+
+  /*-----------------------------------------------------------------------------*/
+
+
+  //Open BlankDocPage
   openblankDoc() {
   this.navCtrl.push(BlankdocPage);
-}
+  }
+
+  getNote(createDate: number){
+    this.noteService.getNote(createDate).then((n) => {
+      this.note = n;
+      this.navCtrl.push(ViewNotePage, { note: this.note})
+    })
+  }
+
+  getAllNotes(){
+    return this.noteService.getAllNotes();
+  }
 
 
 }

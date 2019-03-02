@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { GoalsPage } from './goals';
 
+
 @NgModule({
   declarations: [
     GoalsPage,
@@ -11,3 +12,5 @@ import { GoalsPage } from './goals';
   ],
 })
 export class GoalsPageModule {}
+
+

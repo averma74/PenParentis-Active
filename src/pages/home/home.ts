@@ -1,4 +1,3 @@
-import {InAppBrowser} from "@ionic-native/in-app-browser";
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { Component } from '@angular/core';
@@ -12,6 +11,8 @@ import {ResourcesPage} from '../resources/resources';
 import {FacebookPage} from '../facebook/facebook';
 import {TwitterPage} from "../twitter/twitter";
 import {InstagramPage} from "../instagram/instagram";
+import { InAppBrowser } from "@ionic-native/in-app-browser";
+import { BrowserTab } from "@ionic-native/browser-tab";
 
 @IonicPage()
 @Component({
@@ -42,18 +43,13 @@ export class HomePage {
 
     })
   }
-  // goToSalons(){
-  //   // const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
-  //   this.navCtrl.push(SalonsPage, {
-
-  //   })
-  // }
 
   goToSalons(){
-    const browser = this.inAppBrowser.create("http://www.penparentis.org/calendar/", "_self",);
+    this.navCtrl.push(SalonsPage, {
 
+    })
   }
-  
+
   goToDonate(){
     this.navCtrl.push(DonatePage, {
 
@@ -82,19 +78,18 @@ export class HomePage {
     })
   }
 
-
-url: string;
- constructor(public navCtrl: NavController, private inAppBrowser: InAppBrowser) {
+  constructor(public navCtrl: NavController, private inAppBrowser: InAppBrowser, private browserTab: BrowserTab) {
 
   }
 
-  openWebpage(){
-
-
-   const browser = this.inAppBrowser.create("https://google.com", "_self");
-
+  public openWithBrowserTab(url: string) {
+    if (this.browserTab.isAvailable()) {
+      this.browserTab.openUrl(url);
+    }else{
+      let target = "_blank";
+      this.inAppBrowser.create(url, target);
+    }
   }
-
 
   slider=[
     {

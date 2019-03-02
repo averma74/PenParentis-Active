@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar color="blue1">
+    <ion-title>Create Goal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Activity</ion-label>
+      <ion-select [(ngModel)]="activity">
+        <ion-option value="write">Write</ion-option>
+        <ion-option value="brainstorm">Brainstorm</ion-option>
+        <ion-option value="edit">Edit</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+
+  <ion-row>
+    <ion-col width-25>
+      <ion-item>
+        <ion-input type="number" [(ngModel)]="value" placeholder="Number Input"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col width-25>
+      <ion-item>
+        <ion-label>Duration</ion-label>
+        <ion-select [(ngModel)]="duration2">
+          <ion-option value="seconds">Seconds</ion-option>
+          <ion-option value="minutes">Minutes</ion-option>
+          <ion-option value="hours">Hours</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <button id="createBtn">Create</button>
+
+</ion-content>

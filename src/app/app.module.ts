@@ -6,25 +6,30 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { GoalsPage } from '../pages/goals/goals';
 import { WriteNowPage } from '../pages/write-now/write-now';
 import { MembershipPage } from '../pages/membership/membership';
-import {SalonsPage} from '../pages/salons/salons';
-import {DonatePage} from '../pages/donate/donate';
-import {ResourcesPage} from '../pages/resources/resources';
-import {FacebookPage} from '../pages/facebook/facebook';
-import {TwitterPage} from "../pages/twitter/twitter";
-import {InAppBrowser} from '@ionic-native/in-app-browser'
-import {LoginPage} from '../pages/login/login' ;
+import { SalonsPage } from '../pages/salons/salons';
+import { DonatePage } from '../pages/donate/donate';
+import { ResourcesPage } from '../pages/resources/resources';
+import { FacebookPage } from '../pages/facebook/facebook';
+import { TwitterPage } from "../pages/twitter/twitter";
+import { LoginPage } from '../pages/login/login' ;
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import {RegisterPage} from '../pages/register/register' ;
-import{InstagramPage} from "../pages/instagram/instagram";
-import {BlankdocPage} from "../pages/blankdoc/blankdoc";
-import {TimerPage} from "../pages/timer/timer";
-import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
+import { InstagramPage } from "../pages/instagram/instagram";
+import { BlankdocPage } from "../pages/blankdoc/blankdoc";
+import { TimerPage } from "../pages/timer/timer";
+import { ProgressBarComponent } from "../components/progress-bar/progress-bar";
+import { IonicStorageModule } from "@ionic/storage";
+import {NewgoalPageModule} from "../pages/newgoal/newgoal.module";
 
 import { AngularFireAuthModule} from "angularfire2/auth"
 import { AngularFireModule } from 'angularfire2';
 import { FIREBASE_CONFIG } from "./app.firebase.config";
-
+import { NoteService } from '../providers/note-service/note-service';
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ViewNotePage} from "../pages/view-note/view-note";
+import { InAppBrowser} from "@ionic-native/in-app-browser";
+import { BrowserTab } from "@ionic-native/browser-tab";
+import {NewgoalPage} from "../pages/newgoal/newgoal";
+import {Autosize} from "../directives/directives.module";
 
 @NgModule({
   declarations: [
@@ -40,15 +45,20 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     InstagramPage,
     TwitterPage,
     BlankdocPage,
-    //CountdownTimerPage,
     TimerPage,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ViewNotePage,
+    NewgoalPage,
+    Autosize
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    IonicStorageModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -64,14 +74,17 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
     BlankdocPage,
     InstagramPage,
     TwitterPage,
-    //CountdownTimerPage,
-    TimerPage
+    TimerPage,
+    ViewNotePage,
+    NewgoalPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    InAppBrowser
+    NoteService,
+    InAppBrowser,
+    BrowserTab,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
