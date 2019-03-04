@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Goal} from "../../models/goals.model";
+import { GoalsServiceProvider} from "../../providers/goals-service/goals-service";
+import {FormControl, FormGroup} from "@angular/forms";
+import {Note} from "../../models/note.model";
+import {NoteService} from "../../providers/note-service/note-service";
 
-/**
- * Generated class for the NewgoalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +13,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'newgoal.html',
 })
 export class NewgoalPage {
+  formGroup: FormGroup;
+  goal: Goal;
+  activity: string = '';
+  duration: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public inputVal:string;
+  constructor(public navCtrl: NavController,
+              private goalsService: GoalsServiceProvider) {
+    this.formGroup = new FormGroup({
+      activity: new FormControl(),
+      duration: new FormControl(),
+
+    })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewgoalPage');
+
+  saveGoal(goal: Goal){
+    this.goalsService.saveGoal(goal);
+    this.navCtrl.pop();
   }
+
+
+
+
 
 }

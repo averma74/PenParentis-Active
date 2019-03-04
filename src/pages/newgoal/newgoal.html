@@ -1,7 +1,8 @@
-<ion-header>
+<ion-header style="width: 385px">
 
-  <ion-navbar color="blue1">
-    <ion-title>Create Goal</ion-title>
+
+  <ion-navbar color="royalblue">
+    <ion-title >Create a New Goal</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -9,38 +10,31 @@
 
 <ion-content padding>
 
-  <ion-list>
+  <form [formGroup]="formGroup"(ngSubmit)="saveGoal(formGroup.value)" >
 
     <ion-item>
       <ion-label>Activity</ion-label>
-      <ion-select [(ngModel)]="activity">
-        <ion-option value="write">Write</ion-option>
-        <ion-option value="brainstorm">Brainstorm</ion-option>
-        <ion-option value="edit">Edit</ion-option>
-      </ion-select>
+      <ion-input type="text" name="activity" formControlName="activity" required></ion-input>
+      <div class="alert" *ngIf="!formGroup.controls['activity'].valid &&
+           formGroup.controls['activity'].touched">{{ activityAlert }}</div>
     </ion-item>
 
-  </ion-list>
+    <ion-item text-wrap>
+      <ion-label>Duration</ion-label>
+      <ion-textarea autosize
+                    type="number" name="duration" formControlName="duration" required></ion-textarea>
+      <div class="alert" *ngIf="!formGroup.controls['duration'].valid &&
+      formGroup.controls['duration'].touched">{{ durationAlert }}</div>
+    </ion-item>
+
+  </form>
 
 
-  <ion-row>
-    <ion-col width-25>
-      <ion-item>
-        <ion-input type="number" [(ngModel)]="value" placeholder="Number Input"></ion-input>
-      </ion-item>
-    </ion-col>
-    <ion-col width-25>
-      <ion-item>
-        <ion-label>Duration</ion-label>
-        <ion-select [(ngModel)]="duration2">
-          <ion-option value="seconds">Seconds</ion-option>
-          <ion-option value="minutes">Minutes</ion-option>
-          <ion-option value="hours">Hours</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-  </ion-row>
+  <div style="text-align: center; padding-top: 90px;">
+    <button (click)="saveGoal()" ion-button style="color: white; background-color: #488AFF;" >Save</button>
+    <button ion-button color= 488AFF>Email</button>
 
-  <button id="createBtn">Create</button>
+  </div>
 
 </ion-content>
+

@@ -1,17 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import 'rxjs/add/observable/interval'
-import {BlankdocPage} from "../blankdoc/blankdoc";
+import {Storage} from "@ionic/storage";
+import { GoalsServiceProvider} from "../../providers/goals-service/goals-service";
+import { Goal} from "../../models/goals.model";
+import {ViewGoalPage} from "../view-goal/view-goal";
 import {NewgoalPage} from "../newgoal/newgoal";
-
-
-/**
- * Generated class for the GoalsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -20,30 +13,30 @@ import {NewgoalPage} from "../newgoal/newgoal";
 })
 export class GoalsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private goals: Promise<Goal[]>;
+  private goal: Goal;
 
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GoalsPage');
-  }
-
-
-  startTime(){
-    setTimeout(function(){
-      alert('you wrote for 10 seconds!');
-    }, 10000)
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private goalsService: GoalsServiceProvider) {
   }
 
+  ionViewWillEnter() {
+    this.goals = this.getAllGoals();
 
-  openblankDoc() {
-    this.navCtrl.push(BlankdocPage);
   }
 
+  getGoal(){
+    this.goalsService.getGoal().then((g) => {
+      this.goal = g;
+      this.navCtrl.push(ViewGoalPage, { goal: this.goal})
+    })
+  }
 
+  getAllGoals(){
+    return this.goalsService.getAllGoals();
+  }
 
   loadProgress="75";
-
-
 
   gotoNewGoalPage(){
     this.navCtrl.push(NewgoalPage);

@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/browser-tab": "^4.16.0",
     "@ionic-native/core": "4.7.0",
-    "@ionic-native/in-app-browser": "^4.16.0",
+    "@ionic-native/in-app-browser": "^4.20.0",
     "@ionic-native/splash-screen": "4.7.0",
     "@ionic-native/status-bar": "4.7.0",
     "@ionic/lab": "^1.0.11",

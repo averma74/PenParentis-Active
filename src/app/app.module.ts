@@ -30,6 +30,8 @@ import { InAppBrowser} from "@ionic-native/in-app-browser";
 import { BrowserTab } from "@ionic-native/browser-tab";
 import {NewgoalPage} from "../pages/newgoal/newgoal";
 import {Autosize} from "../directives/directives.module";
+import { GoalsServiceProvider } from '../providers/goals-service/goals-service';
+import { ViewGoalPage} from "../pages/view-goal/view-goal";
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import {Autosize} from "../directives/directives.module";
     ProgressBarComponent,
     ViewNotePage,
     NewgoalPage,
-    Autosize
+    Autosize,
+    ViewGoalPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import {Autosize} from "../directives/directives.module";
     TwitterPage,
     TimerPage,
     ViewNotePage,
-    NewgoalPage
+    NewgoalPage,
+    ViewGoalPage
   ],
   providers: [
     StatusBar,
@@ -84,7 +88,9 @@ import {Autosize} from "../directives/directives.module";
     NoteService,
     InAppBrowser,
     BrowserTab,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    GoalsServiceProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GoalsServiceProvider,
   ]
 })
 export class AppModule {}

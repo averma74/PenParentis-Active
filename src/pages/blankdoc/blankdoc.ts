@@ -16,7 +16,6 @@ export class BlankdocPage {
   title: string = '';
   content: string = '';
 
-  dummyText: string='Type more';
 
   public inputVal:string;
   constructor(public navCtrl: NavController,
@@ -28,7 +27,7 @@ export class BlankdocPage {
 
     })
   }
-  myInput: any;
+
 
   saveNote(note: Note){
       this.noteService.saveNote(note);
