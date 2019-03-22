@@ -1,37 +1,50 @@
 <ion-content class="login-page">
 
-  <img id="image" src="assets/imgs/LoginPic.jpg" alt="Father and daughter bonding time">
+  <form (ngSubmit)="login()" [formGroup]="loginForm">
 
-  <div class="login-box">
-    <ion-row>
-      <ion-col class="login-text">
-        <h2 class="login-text">Login</h2>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-list inset>
+    <img id="image" src="assets/imgs/LoginPic.jpg" alt="Father and daughter bonding time">
 
-          <ion-item>
-            <ion-input type="text" placeholder="E-mail" [(ngModel)]="user.email" required></ion-input>
-          </ion-item>
+    <div class="login-box">
 
-          <ion-item>
-            <ion-input type="password" placeholder="Password" [(ngModel)]="user.password" required=""></ion-input>
-          </ion-item>
+      <ion-row>
+        <ion-col class="login-text">
+          <h2 class="login-text">Login</h2>
+        </ion-col>
+      </ion-row>
 
-          <ion-item class="fixInput"></ion-item> <!-- This fixes the underline issue for the input fields -->
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
 
-        </ion-list>
-      </ion-col>
-    </ion-row>
+            <ion-item [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }">
+              <ion-input type="text" placeholder="Email" formControlName="email" ></ion-input>
+            </ion-item>
+            <div ngxErrors="email" #emailErrors="ngxErrors">
+              <div [ngxError]="['email', 'required']" [when]="['touched', 'dirty']">It should be a valid email</div>
+            </div>
+      
+            <ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
+              <ion-input type="password" placeholder="Password" formControlName="password" ></ion-input>
+            </ion-item>
+            <div ngxErrors="password" #passwordErrors="ngxErrors">
+              <div [ngxError]="['minlength', 'required']" [when]="['touched']">It should be at least 5 characters</div>
+            </div>
 
-    <ion-row>
-      <ion-col class="signup-col">
-        <button ion-button class="submit-btn" full type="submit" (click)="login(user)">Login</button>
-        <button ion-button class="signup-btn" block clear (click)="register()">Register New Account</button>
-      </ion-col>
-    </ion-row>
-  </div>
+            <ion-item class="fixInput"></ion-item> <!-- This fixes the underline issue for the input fields -->
 
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <div class="form-error">{{loginError}}</div>
+          <button ion-button full type="submit" [disabled]="!loginForm.valid" (click)="login(user)">Log in</button>
+          <button ion-button class="signup-btn" block clear (click)="register()">Register New Account</button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </form>
+  
 </ion-content>

@@ -1,19 +1,13 @@
 page-contact {
-
-
-
-.card-background-page {
-
-      
-       position: relative;
+  .card-background-page {
     
+    position: relative;
     ion-card {
       position: relative;
       text-align: center;
     }
 
- .card-title {
-     //text-align: center;
+    .card-title {
       position: absolute;
       top: 15%;
       font-size: 2.0em;
@@ -22,8 +16,7 @@ page-contact {
       color: #fff;
      }
 
- .card-subtitle {
-    // text-align: center;
+    .card-subtitle {
       font-size: 1.0em;
        position: absolute;
         top: 85%;
@@ -31,22 +24,20 @@ page-contact {
         color: #fff;
       }
 
-.emailButton{
-
-    text-align: center;
-    position: absolute;
-    left: 0%;
-    top: 48%;
-    font-size: 2.0em;
-    width: 100%;
-
-}
-    
-.quotation{
-    font-size: 1.0em;
-    font-style: italic;
-    font-weight: bold;
-    position: relative;
-}
+    .emailButton{
+      text-align: center;
+      position: absolute;
+      left: 0%;
+      top: 48%;
+      font-size: 2.0em;
+      width: 100%;
     }
+
+    .quotation{
+      font-size: 1.0em;
+      font-style: italic;
+      font-weight: bold;
+      position: relative;
+    }
+  }
 }

@@ -10,4 +10,4 @@ import { AcknowledgementsPage } from './acknowledgements';
     IonicPageModule.forChild(AcknowledgementsPage),
   ],
 })
-export class AcknowledgementsPageModule {}
+export class AcknowledgementsPageModule { }

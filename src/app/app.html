@@ -1,7 +1,7 @@
 <ion-split-pane>
 
   <ion-menu [content]="content">
-      
+
     <ion-header>
       <ion-toolbar color='blue1'>
         <ion-title>Pen Parentis</ion-title>
@@ -9,12 +9,9 @@
     </ion-header>
 
     <ion-content padding>
-      <ion-list>        
-        <ion-searchbar id ="searchbar"
-          [(ngModel)]="myInput"
-          [showCancelButton]="shouldShowCancel"
-          (ionInput)="onInput($event)"
-          (ionCancel)="onCancel($event)">
+      <ion-list>
+        <ion-searchbar id="searchbar" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel"
+          (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
         </ion-searchbar>
         <button color="primary-pale" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           {{p.title}}
@@ -24,6 +21,6 @@
     </ion-content>
 
   </ion-menu>
-  
+
   <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main></ion-nav>
 </ion-split-pane>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { User } from '../../models/user';
-import { AngularFireAuth } from "angularfire2/auth";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../../providers/auth-service/auth.service';
 
 @IonicPage()
 @Component({
@@ -9,24 +9,38 @@ import { AngularFireAuth } from "angularfire2/auth";
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  loginForm: FormGroup;
+	loginError: string;
 
-  user = {} as User;
-
-  constructor(private afAuth: AngularFireAuth,
-    public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    fb: FormBuilder,
+    private auth: AuthService,
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
+      this.loginForm = fb.group({
+        email: ['', Validators.compose([Validators.required, Validators.email])],
+        password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+      });
   }
 
-  async login(user: User){
-    try{
-      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
-      if(result){
-        //this.navCtrl.push('RegisterPage');
-        this.navCtrl.push('HomePage');
+  async login(){
+
+      let data = this.loginForm.value;
+
+      if (!data.email) {
+        return;
       }
-    }
-    catch(e){
-      console.error(e);
-    }    
+
+      let credentials = {
+        email: data.email,
+        password: data.password
+      };
+
+      this.auth.signInWithEmail(credentials)
+			.then(
+				() => this.navCtrl.push('HomePage'),
+				error => this.loginError = error.message
+			);
   }
 
   register(){
