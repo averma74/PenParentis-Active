@@ -1,11 +1,13 @@
 .no-scroll .scroll-content{
-  overflow: hidden;
+  overflow: scroll;
   background-color: #6d84d6;
+  display: block;
 }
 
 .slider {
   height: auto;
   width:100%;
+  position: relative;
 }
 
 #menu{
@@ -37,6 +39,52 @@
   align-items: center;
   text-align: center;
 }
+
+
+
+@media only screen and (min-width: 400px)  and (max-width: 800px){
+  .underneathSlider .row {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+
+}
+
+@media only screen and (min-width: 800px)  and (max-width: 1100px){
+  .underneathSlider .row {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  #backButton{
+    position: absolute;
+     top: 50px;
+      right: 10px;
+  }
+
+  #forwardButton{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+  }
+
+}
+
+@media only screen and (min-width: 400px)  and (max-width: 800px){
+  #backButton .row {
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 400px)  and (max-width: 800px){
+  #forwardButton .row {
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+
 
 .scroll-content {
   display: flex;

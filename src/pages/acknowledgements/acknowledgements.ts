@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// import { HomePage } from '../home/home';
 
 /**
- * Generated class for the MembershipPage page.
+ * Generated class for the AcknowledgementsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,17 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-membership',
-  templateUrl: 'membership.html',
-  // template: '<ion-nav [root]="rootPage"></ion-nav>',
+  selector: 'page-acknowledgements',
+  templateUrl: 'acknowledgements.html',
 })
-export class MembershipPage {
+export class AcknowledgementsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MembershipPage');
+    console.log('ionViewDidLoad AcknowledgementsPage');
   }
-  // rootPage= StartPage;
+
 }

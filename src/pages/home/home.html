@@ -16,6 +16,9 @@
 </ion-header>
 
 <ion-content class ="no-scroll">
+  
+  <ion-grid>
+    <ion-row>
 
   <!-- beginning of slides-->
   <ion-slides pager="true" class="slider" autoplay="3000" loop="true">
@@ -26,8 +29,7 @@
   <!-- end of slides-->
 
   <ion-fab>
-    <button id="backButton" ion-button icon-start clear style="color: white;
-position: absolute; top: 50px; right: 10px;">
+    <button id="backButton" ion-button icon-start clear style="color: white; ">
       <ion-icon name="arrow-back"></ion-icon>
     </button>
   </ion-fab>
@@ -37,8 +39,22 @@ position: absolute; top: 50px; right: 10px;">
       <ion-icon name="arrow-forward"></ion-icon>
     </button>
   </ion-fab>
+    </ion-row>
+  
+  
+  </ion-grid>
 
-  <div class="underneathSlider">
+  
+  <ion-grid>
+
+
+
+    <ion-row>
+      <ion-col>
+      
+ <div class="underneathSlider" >
+   
+         
     <!-- top row -->
     <div class="row">
       <!-- Membership button -->
@@ -68,6 +84,8 @@ position: absolute; top: 50px; right: 10px;">
       </div>
 
     </div>
+
+    
     <!-- middle row -->
     <div class="row">
       <!-- Goals Button -->
@@ -125,5 +143,11 @@ position: absolute; top: 50px; right: 10px;">
     </div>
 
 
-  </div><!-- this is the end of the bottom row div -->
+   </div> <!-- this is the end of the bottom row div -->
+
+   </ion-col>
+    </ion-row>
+   </ion-grid>
+  
+ 
 </ion-content>

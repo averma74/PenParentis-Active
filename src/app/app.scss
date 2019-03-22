@@ -21,24 +21,28 @@
 }
 
 .buttons{
-  width: 400px;
-  height: 100px;
+   width: 400px;
+  height: 150px;
   padding: 0;
   font-size: 40px;
   background-color: grey;
   color: red;
+  
+  
 }
 
 .button-inner{
   justify-content: flex-start;
+  
 }
 
 
 #peopleIcon{
   color:grey;
   font-size: 28px;
-  padding-right: 10px;
-  padding-left: 0px;
+  padding-right: 0px;
+  padding-left: 10px;
+  
 }
 
 #mailIcon{
@@ -46,8 +50,16 @@
   font-size: 28px;
   padding-right: 10px;
   padding-left: 0px;
+ 
 }
 
+#acknowledgemntsIcon{
+  color:grey;
+  font-size: 50px;
+  padding-right: 10px;
+  padding-left: 0px;
+  
+}
 hr {
   height: 1px !important;
   width: 500px !important;
