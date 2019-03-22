@@ -21,5 +21,5 @@ export class InstagramPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad InstagramPage');
   }
-
+  
 }

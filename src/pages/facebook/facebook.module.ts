@@ -10,4 +10,4 @@ import { FacebookPage } from './facebook';
     IonicPageModule.forChild(FacebookPage),
   ],
 })
-export class FacebookPageModule {}
+export class FacebookPageModule { }

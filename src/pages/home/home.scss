@@ -1,4 +1,4 @@
-.no-scroll .scroll-content{
+.no-scroll .scroll-content {
   overflow: scroll;
   background-color: #6d84d6;
   display: block;
@@ -6,25 +6,15 @@
 
 .slider {
   height: auto;
-  width:100%;
+  width: 100%;
   position: relative;
 }
 
-#menu{
+#menu {
   color: white;
 }
 
-/*
-#backButton{
-  color: white;
-  background-color: transparent;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-}
-*/
-
-#forwardButton{
+#forwardButton {
   color: map-get($colors, white);
   background-color: transparent;
   top: 50px;
@@ -40,51 +30,45 @@
   text-align: center;
 }
 
-
-
-@media only screen and (min-width: 400px)  and (max-width: 800px){
+@media only screen and (min-width: 400px) and (max-width: 800px) {
   .underneathSlider .row {
     margin: 0 auto;
     width: 400px;
   }
-
-
 }
 
-@media only screen and (min-width: 800px)  and (max-width: 1100px){
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
   .underneathSlider .row {
     margin: 0 auto;
     width: 400px;
   }
 
-  #backButton{
-    position: absolute;
-     top: 50px;
-      right: 10px;
-  }
-
-  #forwardButton{
+  #backButton {
     position: absolute;
     top: 50px;
     right: 10px;
   }
 
+  #forwardButton {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+  }
 }
 
-@media only screen and (min-width: 400px)  and (max-width: 800px){
+@media only screen and (min-width: 400px) and (max-width: 800px) {
   #backButton .row {
     margin: 0 auto;
     width: 400px;
   }
 }
 
-@media only screen and (min-width: 400px)  and (max-width: 800px){
+@media only screen and (min-width: 400px) and (max-width: 800px) {
   #forwardButton .row {
     margin: 0 auto;
     width: 400px;
   }
 }
-
 
 .scroll-content {
   display: flex;
@@ -94,7 +78,6 @@
 ion-slides {
   display: flex;
 }
-
 
 ion-title {
   position: absolute;
@@ -108,13 +91,12 @@ ion-title {
   font-size: 100%;
 }
 
-.row{
+.row {
   vertical-align: top;
-  horiz-align: center;
   border-radius: 25px;
 }
 
-.inner-pre{
+.inner-pre {
   font-family: "Avenir Next";
   color: white;
   text-align: center;
@@ -122,182 +104,177 @@ ion-title {
   padding-bottom: 20px;
 }
 
-div.Membership{
-  //vertical-align: top;
+div.Membership {
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Salons{
+div.Salons {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Donate{
+div.Donate {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Goals{
+div.Goals {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.WriteNow{
+div.WriteNow {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Resources{
+div.Resources {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Facebook{
+div.Facebook {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Twitter{
+div.Twitter {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-div.Instagram{
+div.Instagram {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   width: 120px;
 }
 
-#memberText{
+#memberText {
   text-align: center;
   padding-top: 0px;
 }
 
-#memberButton{
+#memberButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#salonButton{
+#salonButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#donateButton{
+#donateButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#goalsButton{
+#goalsButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#writeButton{
+#writeButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#resourcesButton{
+#resourcesButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#fbButton{
-
+#fbButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#twitterButton{
+#twitterButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#igButton{
-
+#igButton {
   border: white;
   border-radius: 10px 10px 10px 10px;
 }
 
-#memberImg{
+#memberImg {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-#salonsImg{
+#salonsImg {
   position: absolute;
   top: 10px;
   right: 15px;
 }
 
-#donateImg{
+#donateImg {
   position: absolute;
   top: 10px;
   right: 5px;
 }
 
-#goalsImg{
+#goalsImg {
   position: absolute;
   top: 14px;
   right: 10px;
 }
 
-#writeImg{
+#writeImg {
   position: absolute;
   top: 14px;
   right: 10px;
 }
 
-#resourcesImg{
+#resourcesImg {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-#fbImg{
+#fbImg {
   position: absolute;
   top: 14px;
   right: 10px;
 }
 
-#twitterImg{
+#twitterImg {
   position: absolute;
   top: 14px;
   right: 10px;
 }
 
-#igImg{
+#igImg {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-
 
 .swiper-pagination-bullet-active {
-background: red;
-opacity: 1;
+  background: red;
+  opacity: 1;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
   background: white;
 }
-
-

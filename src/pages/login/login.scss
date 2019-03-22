@@ -1,8 +1,8 @@
-.login-page{
+.login-page {
   background-color: #6d84d6;
 }
 
-#image{
+#image {
   display: block;
   margin-left: 20%;
   margin-right: 20%;
@@ -13,34 +13,34 @@
   border-radius: 15px;
 }
 
-#logIn{
+#logIn {
   position: absolute;
   top: 60%;
   left: 37%;
 }
 
-ion-row{
-   align-items: center;
-   text-align: center;
- }
+ion-row {
+  align-items: center;
+  text-align: center;
+}
 
-ion-item{
+ion-item {
   border: 0;
 }
 
-ion-item.fixInput{
+ion-item.fixInput {
   height: 0;
 }
 
-.item{
+.item {
   min-height: 0rem;
 }
 
-ion-input{
+ion-input {
   border: 0;
 }
 
-.login-box{
+.login-box {
   padding: 10px 10px 0px 10px;
   margin-top: 30px;
   margin-left: 5%;
@@ -64,10 +64,8 @@ ion-input{
   border-radius: 30px !important;
 }
 
-.login-text{
+.login-text {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-
-

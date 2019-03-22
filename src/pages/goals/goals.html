@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar color="blue1">
@@ -6,15 +5,12 @@
       <button ion-button style="font-size: 22px;" (click)="gotoNewGoalPage()">
         <ion-icon name="add"></ion-icon>
       </button>
-
-
     </ion-buttons>
-    <!--<ion-title text-center>Goals</ion-title>-->
-    <div class="goalsWords" style="font-family: 'Courier New'; padding-left: 35%; font-size: 20px; color: white">Goals</div>
+    <div class="goalsWords" style="font-family: 'Courier New'; padding-left: 35%; font-size: 20px; color: white">Goals
+    </div>
   </ion-navbar>
 
 </ion-header>
-
 
 <ion-content padding>
 
@@ -24,8 +20,6 @@
     <button ion-item *ngFor="let goal of goals | async" (click)="getGoal()">
       {{ goal?.activity }}
     </button>
-    <!--<div *ngIf="(notes | async)?.length > 0; else text"></div>
-    <ng-template #text> <label class="displayText">No notes to display.</label></ng-template>-->
   </ion-list>
 
   <h6 id="progressText" style="font-family: Arial; font-size: 13px;">Progress to Next Milestone</h6>

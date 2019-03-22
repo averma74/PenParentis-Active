@@ -10,4 +10,5 @@ import { TwitterPage } from './twitter';
     IonicPageModule.forChild(TwitterPage),
   ],
 })
-export class TwitterPageModule {}
+
+export class TwitterPageModule { }

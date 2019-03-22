@@ -1,71 +1,36 @@
-
-
 <ion-header>
-
   <ion-navbar color="primary">
-    <div class="membershipWords" style="font-weight:bold; padding-left: 35%; font-size: large; color: white">Join Us</div>
-    <!-- <ion-title>Join Us</ion-title> -->
+    <div class="membershipWords" style="font-weight:bold; padding-left: 35%; font-size: large; color: white">Join Us
+    </div>
   </ion-navbar>
-  <!-- <ion-navbar color="primary"> -->
-   
-    <!-- <button ion-button icon-only  >
-      <ion-icon name="arrow-dropleft"></ion-icon>
-    </button> -->
-    
-    <!-- <ion-title>Join Us</ion-title>
-  </ion-navbar> -->
-
 </ion-header>
 
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
 
-<!-- <ion-content padding> -->
-
-  <!-- <div class="box1">
-    <button id="Login" ion-button click="" clear>
-      Member Log-In
-    </button>
-  </div>
-
-  <div class="box2">
-    <button id="SignUp" ion-button click="" clear>
-      Become a Member
-    </button>
-  </div> -->
-
-  <ion-content class="card-background-page">
-    <ion-grid>
-        <ion-row>
-          
-
- <ion-card class="membershipcard">
-    <img src="./assets/imgs/memberpage2.jpg">
-    <!-- <div class="card-title">Contact Us</div> -->
-    <div class="member-login">
-        <button ion-button color="dark"  round icon-end  item-start (click)="forMemberlogin()">  Member Login 
-            <ion-icon name="contact" ></ion-icon>
-        </button> 
+      <ion-card class="membershipcard">
+        <img src="./assets/imgs/memberpage2.jpg">
+        <div class="member-login">
+          <button ion-button color="dark" round icon-end item-start (click)="forMemberlogin()"> Member Login
+            <ion-icon name="contact"></ion-icon>
+          </button>
         </div>
-
         <div class="become-a-member">
-          <button ion-button color="dark" round  icon-end   item-start (click)="forBecomingmember()"> Become a Member  
-              <ion-icon name="arrow-dropright-circle" ></ion-icon>
-          </button> 
-          </div>
-          <!-- <div class="card-subtitle">Our doors are open to all writers who are also parents.</div> -->
-          </ion-card>
-          <ion-card>
+          <button ion-button color="dark" round icon-end item-start (click)="forBecomingmember()"> Become a Member
+            <ion-icon name="arrow-dropright-circle"></ion-icon>
+          </button>
+        </div>        
+      </ion-card>
 
-            <ion-card-header  class="quotation">
-                " Our doors are open to all writers who are also parents."
-            </ion-card-header>
-          
-            <ion-card-content>
-               
-            </ion-card-content>
-          
-          </ion-card>   
+      <ion-card>
+        <ion-card-header class="quotation">
+          " Our doors are open to all writers who are also parents."
+        </ion-card-header>
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
 
-         
-          </ion-row>
-          </ion-grid>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -5,4 +5,4 @@ import { ProgressBarComponent } from './progress-bar/progress-bar';
 	imports: [],
 	exports: [ProgressBarComponent]
 })
-export class ComponentsModule {}
+export class ComponentsModule { }

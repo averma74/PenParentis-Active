@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {InAppBrowser} from "@ionic-native/in-app-browser";
 
 /**
  * Generated class for the FacebookPage page.
@@ -22,7 +21,5 @@ export class FacebookPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FacebookPage');
   }
-
-
 
 }

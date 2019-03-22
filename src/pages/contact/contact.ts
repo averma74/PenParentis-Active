@@ -23,12 +23,12 @@ export class ContactPage {
     console.log('ionViewDidLoad ContactPage');
   }
 
-  forSendingEmail(){
-    this.emailComposer.isAvailable().then((available: boolean) =>{
-      if(available) {
-      
+  forSendingEmail() {
+    this.emailComposer.isAvailable().then((available: boolean) => {
+      if (available) {
+
       }
-      else{
+      else {
         alert("No Email client was found !");
       }
     });
@@ -36,7 +36,7 @@ export class ContactPage {
     let email = {
       to: 'info@penparentis.org',
       cc: ' ',
-      bcc: ['' ],
+      bcc: [''],
       attachments: [''],
       subject: '',
       body: '',
@@ -46,6 +46,3 @@ export class ContactPage {
     this.emailComposer.open(email);
   };
 }
-
-
-

@@ -13,10 +13,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-twitter',
   templateUrl: 'twitter.html',
 })
+
 export class TwitterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TwitterPage');

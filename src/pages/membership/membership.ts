@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// import { HomePage } from '../home/home';
 
 /**
  * Generated class for the MembershipPage page.
@@ -13,7 +12,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-membership',
   templateUrl: 'membership.html',
-  // template: '<ion-nav [root]="rootPage"></ion-nav>',
 })
 export class MembershipPage {
 
@@ -23,5 +21,5 @@ export class MembershipPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MembershipPage');
   }
-  // rootPage= StartPage;
+
 }

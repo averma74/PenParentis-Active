@@ -10,4 +10,4 @@ import { TimerPage } from './timer';
     IonicPageModule.forChild(TimerPage),
   ],
 })
-export class TimerPageModule {}
+export class TimerPageModule { }

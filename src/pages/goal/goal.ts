@@ -17,7 +17,6 @@ export class GoalPage {
 
   goalsRoot = 'GoalsPage'
 
-
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) { }
 
 }

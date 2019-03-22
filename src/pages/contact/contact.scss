@@ -1,6 +1,5 @@
 page-contact {
   .card-background-page {
-    
     position: relative;
     ion-card {
       position: relative;
@@ -10,31 +9,31 @@ page-contact {
     .card-title {
       position: absolute;
       top: 15%;
-      font-size: 2.0em;
+      font-size: 2em;
       width: 100%;
       font-weight: bold;
       color: #fff;
-     }
+    }
 
     .card-subtitle {
-      font-size: 1.0em;
-       position: absolute;
-        top: 85%;
-        width: 100%;
-        color: #fff;
-      }
+      font-size: 1em;
+      position: absolute;
+      top: 85%;
+      width: 100%;
+      color: #fff;
+    }
 
-    .emailButton{
+    .emailButton {
       text-align: center;
       position: absolute;
       left: 0%;
       top: 48%;
-      font-size: 2.0em;
+      font-size: 2em;
       width: 100%;
     }
 
-    .quotation{
-      font-size: 1.0em;
+    .quotation {
+      font-size: 1em;
       font-style: italic;
       font-weight: bold;
       position: relative;

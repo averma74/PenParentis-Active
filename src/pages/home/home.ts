@@ -2,15 +2,15 @@ import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {GoalsPage} from '../goals/goals';
-import {WriteNowPage} from '../write-now/write-now';
-import {MembershipPage} from '../membership/membership';
-import {SalonsPage} from '../salons/salons';
-import {DonatePage} from '../donate/donate';
-import {ResourcesPage} from '../resources/resources';
-import {FacebookPage} from '../facebook/facebook';
-import {TwitterPage} from "../twitter/twitter";
-import {InstagramPage} from "../instagram/instagram";
+import { GoalsPage } from '../goals/goals';
+import { WriteNowPage } from '../write-now/write-now';
+import { MembershipPage } from '../membership/membership';
+import { SalonsPage } from '../salons/salons';
+import { DonatePage } from '../donate/donate';
+import { ResourcesPage } from '../resources/resources';
+import { FacebookPage } from '../facebook/facebook';
+import { TwitterPage } from "../twitter/twitter";
+import { InstagramPage } from "../instagram/instagram";
 import { InAppBrowser } from "@ionic-native/in-app-browser";
 import { BrowserTab } from "@ionic-native/browser-tab";
 
@@ -33,82 +33,83 @@ export class HomePage {
 
     })
   }
-  goToWriteNow(){
+  goToWriteNow() {
     this.navCtrl.push(WriteNowPage, {
 
     })
   }
-  goToMembership(){
+  goToMembership() {
     this.navCtrl.push(MembershipPage, {
 
     })
   }
 
-  goToSalons(){
+  goToSalons() {
     this.navCtrl.push(SalonsPage, {
 
     })
   }
 
-  goToDonate(){
+  goToDonate() {
     this.navCtrl.push(DonatePage, {
 
     })
   }
-  goToResources(){
+  goToResources() {
     this.navCtrl.push(ResourcesPage, {
 
     })
   }
-  goToFacebook(){
+  goToFacebook() {
     this.navCtrl.push(FacebookPage, {
 
     })
   }
 
-  goToTwitter(){
+  goToTwitter() {
     this.navCtrl.push(TwitterPage, {
 
     })
   }
 
-  goToInstagram(){
+  goToInstagram() {
     this.navCtrl.push(InstagramPage, {
 
     })
   }
 
-  constructor(public navCtrl: NavController, private inAppBrowser: InAppBrowser, private browserTab: BrowserTab) {
-
-  }
+  constructor(
+    public navCtrl: NavController, 
+    private inAppBrowser: InAppBrowser, 
+    private browserTab: BrowserTab) {  }
 
   public openWithBrowserTab(url: string) {
     if (this.browserTab.isAvailable()) {
       this.browserTab.openUrl(url);
-    }else{
+    } else {
       let target = "_blank";
       this.inAppBrowser.create(url, target);
     }
   }
 
-  slider=[
+  slider = [
     {
-      image:"assets/imgs/image1.png"
+      image: "assets/imgs/image1.png"
     },
     {
-      image:"assets/imgs/image2.png"
+      image: "assets/imgs/image2.png"
     },
     {
-      image:"assets/imgs/image3.png"
+      image: "assets/imgs/image3.png"
     },
     {
-      image:"assets/imgs/image4.png"
+      image: "assets/imgs/image4.png"
     },
     {
-      image:"assets/imgs/image5.png"
+      image: "assets/imgs/image5.png"
     },
     {
-      image:"assets/imgs/image6.png"
+      image: "assets/imgs/image6.png"
     }
   ];
 

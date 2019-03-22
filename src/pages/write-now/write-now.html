@@ -5,23 +5,18 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color="blue1">
-    <div class="writeNowWords" style="font-family:Courier; padding-left: 23%; top: 20%;font-size: large; color: white">Write Now</div>
-  <!--<ion-title>WRITE NOW</ion-title>-->
-  <div class="addButton">
-    <button ion-button (click)="openblankDoc()" style="background-color: transparent; float:right">
-  <ion-icon ios="ios-add" md="md-add" style="color:white; float:right; font-size: 25px"></ion-icon>
-</button>
-  </div>
-</ion-navbar>
-
+    <div class="writeNowWords" style="font-family:Courier; padding-left: 23%; top: 20%;font-size: large; color: white">
+      Write Now</div>
+    <div class="addButton">
+      <button ion-button (click)="openblankDoc()" style="background-color: transparent; float:right">
+        <ion-icon ios="ios-add" md="md-add" style="color:white; float:right; font-size: 25px"></ion-icon>
+      </button>
+    </div>
+  </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
-
   <ion-list>
     <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">
       {{ note.title }}
@@ -29,8 +24,4 @@
     <div *ngIf="(notes | async)?.length > 0; else text"></div>
     <ng-template #text> <label class="displayText">No notes to display.</label></ng-template>
   </ion-list>
-
-
-
-
 </ion-content>

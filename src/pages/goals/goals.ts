@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {Storage} from "@ionic/storage";
-import { GoalsServiceProvider} from "../../providers/goals-service/goals-service";
-import { Goal} from "../../models/goals.model";
-import {ViewGoalPage} from "../view-goal/view-goal";
-import {NewgoalPage} from "../newgoal/newgoal";
+import { GoalsServiceProvider } from "../../providers/goals-service/goals-service";
+import { Goal } from "../../models/goals.model";
+import { ViewGoalPage } from "../view-goal/view-goal";
+import { NewgoalPage } from "../newgoal/newgoal";
 
 @IonicPage()
 @Component({
@@ -17,28 +16,27 @@ export class GoalsPage {
   private goal: Goal;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private goalsService: GoalsServiceProvider) {
+    private goalsService: GoalsServiceProvider) {
   }
 
   ionViewWillEnter() {
     this.goals = this.getAllGoals();
-
   }
 
-  getGoal(){
+  getGoal() {
     this.goalsService.getGoal().then((g) => {
       this.goal = g;
-      this.navCtrl.push(ViewGoalPage, { goal: this.goal})
+      this.navCtrl.push(ViewGoalPage, { goal: this.goal })
     })
   }
 
-  getAllGoals(){
+  getAllGoals() {
     return this.goalsService.getAllGoals();
   }
 
-  loadProgress="75";
+  loadProgress = "75";
 
-  gotoNewGoalPage(){
+  gotoNewGoalPage() {
     this.navCtrl.push(NewgoalPage);
   }
 

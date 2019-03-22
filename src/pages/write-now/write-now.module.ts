@@ -10,4 +10,4 @@ import { WriteNowPage } from './write-now';
     IonicPageModule.forChild(WriteNowPage),
   ],
 })
-export class WriteNowPageModule {}
+export class WriteNowPageModule { }

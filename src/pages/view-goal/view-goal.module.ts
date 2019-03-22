@@ -10,4 +10,5 @@ import { ViewGoalPage } from './view-goal';
     IonicPageModule.forChild(ViewGoalPage),
   ],
 })
-export class ViewGoalPageModule {}
+
+export class ViewGoalPageModule { }

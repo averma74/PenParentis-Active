@@ -10,4 +10,4 @@ import { DonatePage } from './donate';
     IonicPageModule.forChild(DonatePage),
   ],
 })
-export class DonatePageModule {}
+export class DonatePageModule { }
