@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { NoteService } from "../../providers/note-service/note-service";
 import { Note } from "../../models/note.model";
 import { FormGroup, FormControl } from "@angular/forms";

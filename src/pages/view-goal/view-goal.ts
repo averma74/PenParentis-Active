@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GoalsServiceProvider } from "../../providers/goals-service/goals-service";
+//import { GoalsServiceProvider } from "../../providers/goals-service/goals-service";
 import { Goal } from "../../models/goals.model";
 
 @IonicPage()
@@ -14,9 +14,11 @@ export class ViewGoalPage {
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams,
-    private goalsService: GoalsServiceProvider) {
-    this.goal = this.navParams.get('goal');
+    public navParams: NavParams
+    //,private goalsService: GoalsServiceProvider
+    ) 
+    {
+    //this.goal = this.navParams.get('goal');
   }
 
 }

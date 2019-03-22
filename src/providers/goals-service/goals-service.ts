@@ -13,8 +13,8 @@ export class GoalsServiceProvider {
   saveGoal(goal: Goal) {
     this.goals.push(goal);
     this.storage.set('goals', this.goals);
-    let count = 0;
-    count++;
+    // let count = 0;
+    // count++;
   }
 
   getAllGoals() {

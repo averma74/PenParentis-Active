@@ -14,8 +14,8 @@ export class NoteService {
     note.createDate = Date.now();
     this.notes.push(note);
     this.storage.set('notes', this.notes);
-    let count = 0;
-    count++;
+    //let count = 0;
+    //count++;
   }
 
   getAllNotes() {

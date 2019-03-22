@@ -1,7 +1,7 @@
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { GoalsPage } from '../goals/goals';
 import { WriteNowPage } from '../write-now/write-now';
 import { MembershipPage } from '../membership/membership';

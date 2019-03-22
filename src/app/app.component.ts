@@ -3,12 +3,12 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { AcknowledgementsPage } from '../pages/acknowledgements/acknowledgements';
-import { AuthService } from '../providers/auth-service/auth.service';
+//import { AuthService } from '../providers/auth-service/auth.service';
+//import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,8 +25,9 @@ export class MyApp {
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    private emailComposer: EmailComposer,
-    private auth: AuthService) {
+    //private emailComposer: EmailComposer,
+    //private auth: AuthService
+    ) {
     this.initializeApp();
 
     this.pages = [
