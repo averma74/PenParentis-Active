@@ -5,6 +5,7 @@ import { GoalsServiceProvider} from "../../providers/goals-service/goals-service
 import { Goal} from "../../models/goals.model";
 import {ViewGoalPage} from "../view-goal/view-goal";
 import {NewgoalPage} from "../newgoal/newgoal";
+import {ViewNotePage} from "../view-note/view-note";
 
 @IonicPage()
 @Component({
@@ -25,14 +26,24 @@ export class GoalsPage {
 
   }
 
+
+ /* getNote(createDate: number){
+    this.noteService.getNote(createDate).then((n) => {
+      this.note = n;
+      this.navCtrl.push(ViewNotePage, { note: this.note})
+    })
+  }*/
+
   getGoal(){
     this.goalsService.getGoal().then((g) => {
       this.goal = g;
       this.navCtrl.push(ViewGoalPage, { goal: this.goal})
+      console.log("GetGoals" + this.goal);
     })
   }
 
   getAllGoals(){
+    console.log("getAllGoals" + this.goal);
     return this.goalsService.getAllGoals();
   }
 

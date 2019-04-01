@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Storage} from "@ionic/storage";
 import { Goal} from "../../models/goals.model";
+import {titleCase} from "@ionic/app-scripts";
 
 @Injectable()
 export class GoalsServiceProvider {
@@ -18,6 +19,13 @@ export class GoalsServiceProvider {
     let count = 0;
     count++;
   }
+
+  /*getNote(createDate: number){
+    return this.storage.get('notes').then((notes) => {
+      this.note = [...notes].find(r => r.createDate === createDate);
+      return this.note;
+    });
+  }*/
 
   getAllGoals(){
     return this.storage.get('goals').then(

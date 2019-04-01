@@ -30,6 +30,7 @@ export class NewgoalPage {
 
 
   saveGoal(goal: Goal){
+    console.log("saveGoal: " + this.goal);
     this.goalsService.saveGoal(goal);
     this.navCtrl.pop();
   }

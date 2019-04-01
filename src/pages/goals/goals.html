@@ -22,7 +22,7 @@
 
   <ion-list>
     <button ion-item *ngFor="let goal of goals | async" (click)="getGoal()">
-      {{ goal?.activity }}
+      {{ goals }}
     </button>
     <!--<div *ngIf="(notes | async)?.length > 0; else text"></div>
     <ng-template #text> <label class="displayText">No notes to display.</label></ng-template>-->

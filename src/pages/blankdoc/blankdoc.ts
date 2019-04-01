@@ -30,6 +30,7 @@ export class BlankdocPage {
 
 
   saveNote(note: Note){
+    
       this.noteService.saveNote(note);
       this.navCtrl.pop();
   }
