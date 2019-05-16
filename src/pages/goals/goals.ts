@@ -24,8 +24,8 @@ export class GoalsPage {
     this.goals = this.getAllGoals();
   }
 
-  getGoal() {
-    this.goalsService.getGoal().then((g) => {
+  getGoal(activity:String) {
+    this.goalsService.getGoal(activity).then((g) => {
       this.goal = g;
       this.navCtrl.push(ViewGoalPage, { goal: this.goal })
     })

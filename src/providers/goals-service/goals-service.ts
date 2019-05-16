@@ -35,8 +35,17 @@ export class GoalsServiceProvider {
     )
   }
 
-  getGoal() {
+  // getGoal() {
+  //   return this.storage.get('goals').then((goals) => {
+  //     return goals;
+  //   });
+  // }
+
+  getGoal(activity: String) {
+    console.log(activity)
     return this.storage.get('goals').then((goals) => {
+      this.goal = [...goals].find(r => r.activity === activity);
+      console.log(this.goal)
       return this.goal;
     });
   }
