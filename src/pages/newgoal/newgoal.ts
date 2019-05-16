@@ -14,9 +14,8 @@ export class NewgoalPage {
 
   formGroup: FormGroup;
   goal: Goal;
-  activity: string = '';
-  duration: number;
-  public inputVal: string;
+  activity: String ='';
+  duration: Number;
 
   constructor(public navCtrl: NavController,
     private goalsService: GoalsServiceProvider) {
@@ -28,7 +27,7 @@ export class NewgoalPage {
 
 
   saveGoal(goal: Goal){
-    console.log("saveGoal: " + this.goal);
+    console.log(goal);
     this.goalsService.saveGoal(goal);
     this.navCtrl.pop();
   }

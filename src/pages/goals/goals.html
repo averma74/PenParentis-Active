@@ -17,8 +17,8 @@
   <h6 text-center style="color:royalblue;">Daily Writing Challenge</h6>
 
   <ion-list>
-    <button ion-item *ngFor="let goal of goals | async" (click)="getGoal()">
-      {{ goals }}
+    <button ion-item *ngFor="let goal of goals | async" (click)="getGoal(goal.activity)">
+      {{ goal.activity }}
     </button>
   </ion-list>
 
