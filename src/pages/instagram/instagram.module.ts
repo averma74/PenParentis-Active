@@ -10,4 +10,4 @@ import { InstagramPage } from './instagram';
     IonicPageModule.forChild(InstagramPage),
   ],
 })
-export class InstagramPageModule {}
+export class InstagramPageModule { }

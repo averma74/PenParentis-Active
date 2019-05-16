@@ -12,118 +12,142 @@
     </ion-title>
 
   </ion-toolbar>
-
 </ion-header>
 
-<ion-content class ="no-scroll">
 
-  <!-- beginning of slides-->
-  <ion-slides pager="true" class="slider" autoplay="3000" loop="true">
-    <ion-slide *ngFor="let slide of slider" class="thePics">
-      <img [src]="slide.image" />
-    </ion-slide>
-  </ion-slides>
-  <!-- end of slides-->
+<ion-content class="no-scroll">
+  <ion-grid>
+    <ion-row>
 
-  <!--<ion-fab>
-    <button id="backButton" ion-button icon-start clear style="color: white;
-position: absolute; top: 50px; right: 10px;">
-      <ion-icon name="arrow-back"></ion-icon>
-    </button>
-  </ion-fab>
+      <!-- beginning of slides-->
+      <ion-slides pager="true" class="slider" autoplay="3000" loop="true">
+        <ion-slide *ngFor="let slide of slider" class="thePics">
+          <img [src]="slide.image" />
+        </ion-slide>
+      </ion-slides>
+      <!-- end of slides-->
 
-  <ion-fab>
-    <button id="forwardButton" ion-button icon-start click="goToSlide()" clear>
-      <ion-icon name="arrow-forward"></ion-icon>
-    </button>
-  </ion-fab>-->
-
-  <div class="underneathSlider">
-    <!-- top row -->
-    <div class="row">
-      <!-- Membership button -->
-      <div class="Membership" style="padding-left: 35px; padding-top: 10px" >
-        <button ion-button color="white" id="memberButton" style="height: 80px;width: 80px;" (click)="goToMembership()">
-          <input type="image" id="memberImg" src="assets/imgs/membership.png" style="height:55px"/>
+      <ion-fab>
+        <button id="backButton" ion-button icon-start clear style="color: white; ">
+          <ion-icon name="arrow-back"></ion-icon>
         </button>
-        <span class="inner-pre">Membership</span>
-      </div>
+      </ion-fab>
 
-      <!-- Salons button -->
-      <div class ="Salons" style="padding-left: 20px; padding-top: 10px">
-        <button ion-button color="white" id="salonButton" style="width:80px; height:80px;" (click)="openWithBrowserTab('http://www.penparentis.org/calendar/')">
-          <input type="image" id="salonsImg" src="assets/imgs/salons.png" style="height:55px"/>
+      <ion-fab>
+        <button id="forwardButton" ion-button icon-start click="goToSlide()" clear>
+          <ion-icon name="arrow-forward"></ion-icon>
         </button>
+      </ion-fab>
 
-        <span class="inner-pre">Salons</span>
-      </div>
-      <!-- Donate button -->
-      <div class ="Donate" style="padding-left:10px; padding-top: 10px">
+    </ion-row>
+  </ion-grid>
 
-        <button ion-button color="white" id="donateButton" style="width:80px; height:80px;" (click)="openWithBrowserTab('https://www.paypal.com/fundraiser/charity/144700')" >
-          <input type="image" id="donateImg" src="assets/imgs/donate.png" style="height:55px;"/>
-        </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="underneathSlider">
 
-        <span class="inner-pre">Donate</span>
-      </div>
+          <!-- top row -->
+          <div class="row">
 
-    </div>
-    <!-- middle row -->
-    <div class="row">
-      <!-- Goals Button -->
-      <div class ="Goals" style="padding-top: 0px; padding-left: 35px">
-        <button ion-button color="white" id="goalsButton" style="width:80px; height:80px" (click)="goToGoals()">
-          <input type="image" id="goalsImg" src="assets/imgs/goals.png" style="height:55px"/>
-        </button>
-        <span class="inner-pre">Goals</span>
-      </div>
-      <!-- Write Now Button -->
-      <div class="WriteNow" style="padding-top: 0px; padding-left: 20px">
-        <button ion-button color="white" id="writeButton" style="width:80px; height:80px" (click)="goToWriteNow()">
-          <input type="image" id="writeImg" src="assets/imgs/writenow.png" style="height:55px"/>
-        </button>
-        <span class="inner-pre">Write Now</span>
-      </div>
-      <!-- Resources Button -->
-      <div class="Resources" style="padding-top: 0px; padding-left: 10px;">
-        <button ion-button color="white" id="resourcesButton" style="width:80px; height:80px;" (click)="goToResources()">
-          <input type="image" id="resourcesImg" src="assets/imgs/resources.png" style="height:55px"/>
-        </button>
-        <span class="inner-pre">Resources</span>
-      </div>
-    </div>
+            <!-- Membership button -->
+            <div class="Membership" style="padding-left: 35px; padding-top: 10px">
+              <button ion-button color="white" id="memberButton" style="height: 80px;width: 80px;"
+                (click)="goToMembership()">
+                <input type="image" id="memberImg" src="assets/imgs/membership.png" style="height:55px" />
+              </button>
+              <span class="inner-pre">Membership</span>
+            </div>
 
-    <!-- End of middle row -->
-    <!-- Bottom row -->
-    <div class="row">
-      <!-- Facebook -->
-      <div class="Facebook" style="padding-left:35px; padding-top:0px; padding-bottom: 0px;">
-        <button ion-button color="white" id="fbButton" style="width:80px; height:80px" (click)="openWithBrowserTab('https://www.facebook.com/PenParentis/')">
-          <input type="image" id="fbImg" src="assets/imgs/fb.png" style="height:55px"/>
-        </button>
-        <span class="inner-pre">Facebook</span>
-      </div>
-      <!-- Twitter -->
-      <div class="Twitter" style="padding-left:20px; padding-top:0px">
+            <!-- Salons button -->
+            <div class="Salons" style="padding-left: 20px; padding-top: 10px">
+              <button ion-button color="white" id="salonButton" style="width:80px; height:80px;"
+                (click)="openWithBrowserTab('http://www.penparentis.org/calendar/')">
+                <input type="image" id="salonsImg" src="assets/imgs/salons.png" style="height:55px" />
+              </button>
+              <span class="inner-pre">Salons</span>
+            </div>
 
-        <button ion-button color="white" id="twitterButton" style="width:80px; height:80px" (click)="openWithBrowserTab('https://twitter.com/PenParentis')">
-          <input type="image" id="twitterImg" src="assets/imgs/twitter.png" style="height:55px; align-content: center;" />
-        </button>
+            <!-- Donate button -->
+            <div class="Donate" style="padding-left:10px; padding-top: 10px">
+              <button ion-button color="white" id="donateButton" style="width:80px; height:80px;"
+                (click)="openWithBrowserTab('https://www.paypal.com/fundraiser/charity/144700')">
+                <input type="image" id="donateImg" src="assets/imgs/donate.png" style="height:55px;" />
+              </button>
+              <span class="inner-pre">Donate</span>
+            </div>
 
-        <span class="inner-pre">Twitter</span>
-      </div>
-      <!-- Instagram -->
-      <div class="Instagram" style="padding-left:10px; padding-top:0px">
+          </div>
 
-        <button ion-button color="white" id="igButton" style="width:80px; height:80px" (click)="openWithBrowserTab('https://www.instagram.com/penparentis/')">
-          <input type="image" id="igImg" src="assets/imgs/ig.png" style="height:60px" />
-        </button>
-        <span class="inner-pre">Instagram</span>
-      </div>
-    </div>
-    <div class="row" style="padding-left:50px">
-    </div>
+          <!-- middle row -->
+          <div class="row">
 
+            <!-- Goals Button -->
+            <div class="Goals" style="padding-top: 0px; padding-left: 35px">
+              <button ion-button color="white" id="goalsButton" style="width:80px; height:80px" (click)="goToGoals()">
+                <input type="image" id="goalsImg" src="assets/imgs/goals.png" style="height:55px" />
+              </button>
+              <span class="inner-pre">Goals</span>
+            </div>
 
-  </div><!-- this is the end of the bottom row div -->
+            <!-- Write Now Button -->
+            <div class="WriteNow" style="padding-top: 0px; padding-left: 20px">
+              <button ion-button color="white" id="writeButton" style="width:80px; height:80px"
+                (click)="goToWriteNow()">
+                <input type="image" id="writeImg" src="assets/imgs/writenow.png" style="height:55px" />
+              </button>
+              <span class="inner-pre">Write Now</span>
+            </div>
+
+            <!-- Resources Button -->
+            <div class="Resources" style="padding-top: 0px; padding-left: 10px;">
+              <button ion-button color="white" id="resourcesButton" style="width:80px; height:80px;"
+                (click)="goToResources()">
+                <input type="image" id="resourcesImg" src="assets/imgs/resources.png" style="height:55px" />
+              </button>
+              <span class="inner-pre">Resources</span>
+            </div>
+
+          </div>
+          <!-- End of middle row -->
+
+          <!-- Bottom row -->
+          <div class="row">
+
+            <!-- Facebook -->
+            <div class="Facebook" style="padding-left:35px; padding-top:0px; padding-bottom: 0px;">
+              <button ion-button color="white" id="fbButton" style="width:80px; height:80px"
+                (click)="openWithBrowserTab('https://www.facebook.com/PenParentis/')">
+                <input type="image" id="fbImg" src="assets/imgs/fb.png" style="height:55px" />
+              </button>
+              <span class="inner-pre">Facebook</span>
+            </div>
+
+            <!-- Twitter -->
+            <div class="Twitter" style="padding-left:20px; padding-top:0px">
+              <button ion-button color="white" id="twitterButton" style="width:80px; height:80px"
+                (click)="openWithBrowserTab('https://twitter.com/PenParentis')">
+                <input type="image" id="twitterImg" src="assets/imgs/twitter.png"
+                  style="height:55px; align-content: center;" />
+              </button>
+              <span class="inner-pre">Twitter</span>
+            </div>
+
+            <!-- Instagram -->
+            <div class="Instagram" style="padding-left:10px; padding-top:0px">
+              <button ion-button color="white" id="igButton" style="width:80px; height:80px"
+                (click)="openWithBrowserTab('https://www.instagram.com/penparentis/')">
+                <input type="image" id="igImg" src="assets/imgs/ig.png" style="height:60px" />
+              </button>
+              <span class="inner-pre">Instagram</span>
+            </div>
+          </div>
+          <div class="row" style="padding-left:50px">
+          </div>
+
+        </div> <!-- this is the end of the bottom row div -->
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

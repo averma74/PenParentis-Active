@@ -10,4 +10,4 @@ import { ResourcesPage } from './resources';
     IonicPageModule.forChild(ResourcesPage),
   ],
 })
-export class ResourcesPageModule {}
+export class ResourcesPageModule { }

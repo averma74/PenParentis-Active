@@ -1,16 +1,12 @@
 <ion-header style="width: 385px">
-
-
   <ion-navbar color="royalblue">
-    <ion-title >Create a New Goal</ion-title>
+    <ion-title>Create a New Goal</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
 
-  <form [formGroup]="formGroup"(ngSubmit)="saveGoal(formGroup.value)" >
+  <form [formGroup]="formGroup" (ngSubmit)="saveGoal(formGroup.value)">
 
     <ion-item>
       <ion-label>Activity</ion-label>
@@ -21,20 +17,16 @@
 
     <ion-item text-wrap>
       <ion-label>Duration</ion-label>
-      <ion-textarea autosize
-                    type="number" name="duration" formControlName="duration" required></ion-textarea>
+      <ion-textarea autosize type="number" name="duration" formControlName="duration" required></ion-textarea>
       <div class="alert" *ngIf="!formGroup.controls['duration'].valid &&
       formGroup.controls['duration'].touched">{{ durationAlert }}</div>
     </ion-item>
 
   </form>
 
-
   <div style="text-align: center; padding-top: 90px;">
-    <button (click)="saveGoal()" ion-button style="color: white; background-color: #488AFF;" >Save</button>
-    <button ion-button color= 488AFF>Email</button>
-
+    <button (click)="saveGoal()" ion-button style="color: white; background-color: #488AFF;">Save</button>
+    <button ion-button color=488AFF>Email</button>
   </div>
 
 </ion-content>
-

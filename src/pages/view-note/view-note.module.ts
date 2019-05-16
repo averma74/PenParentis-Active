@@ -10,4 +10,5 @@ import { ViewNotePage } from './view-note';
     IonicPageModule.forChild(ViewNotePage),
   ],
 })
-export class ViewNotePageModule {}
+
+export class ViewNotePageModule { }

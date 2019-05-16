@@ -18,26 +18,26 @@ import "rxjs/add/operator/map";
   selector: 'page-timer',
   templateUrl: 'timer.html',
 })
+
 export class TimerPage {
   countdown: number;
   seconds: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TimerPage');
     this.startCountdownTimer(30);
   }
+
   startCountdownTimer(amountOfTime) {
     const interval = 1000;
-    const duration = (amountOfTime * 1000);//This is what determines how long the timer should be
+    const duration = (amountOfTime * 1000);
     const stream$ = Observable.timer(0, interval)
       .finally(() => console.log("All done!"))
       .takeUntil(Observable.timer(duration + interval))
       .map(value => duration - value * interval);
-    stream$.subscribe(value => this.countdown = (value/1000.0)%60);
-    //minutes = ((value/1000.0)/60)%60
+    stream$.subscribe(value => this.countdown = (value / 1000.0) % 60);
   }
 
 }

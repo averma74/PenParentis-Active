@@ -1,36 +1,30 @@
-page-write-now {
-
-}
-
-.displayText{
+.displayText {
   position: absolute;
   color: #a6a6a6;
   font-size: 16px;
 }
 
-.writeNowWords{
+.writeNowWords {
   position: absolute;
   padding-top: 2%;
 }
 
-.addButton{
- // position: absolute;
+.addButton {
   padding-left: 70%;
   padding-top: 3.5%;
-  //padding-bottom: 100%;
 }
 
-.button-inner{
+.button-inner {
   justify-content: center;
 }
 
-#todoInput{
+#todoInput {
   border-radius: 10px;
   border: 1.5px solid #488aff;
   margin-bottom: 5%;
 }
 
-.todoEditButtons{
+.todoEditButtons {
   justify-content: center;
   align-content: center;
 }

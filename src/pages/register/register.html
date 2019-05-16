@@ -2,6 +2,8 @@
 
   <!--<ion-fab>
     <button id="backButton"  ion-button icon-start clear padding navPop>
+  <ion-fab>
+    <button id="backButton" ion-button icon-start clear padding navPop>
       <ion-icon name="arrow-back"></ion-icon>
     </button>
   </ion-fab>-->
@@ -9,18 +11,17 @@
   
 
   <div class="register-box">
+
     <ion-row>
       <ion-col class="register-text">
         <h2 class="register-text">Register</h2>
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col>
 
         <ion-list inset>
-          <ion-item class="register-input">
-            <ion-input type="text" placeholder="Name"></ion-input>
-          </ion-item>
 
           <ion-item class="register-input">
             <ion-input type="email" placeholder="E-mail" [(ngModel)]="user.email"></ion-input>
@@ -42,9 +43,10 @@
 
     <ion-row>
       <ion-col class="register-col">
-        <button ion-button class="register-btn" full type="submit" (click)= "register(user);">Register</button>
+        <button ion-button class="register-btn" full type="submit" (click)="register(user);">Register</button>
       </ion-col>
     </ion-row>
+    
   </div>
 
 </ion-content>

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Storage} from "@ionic/storage";
 import { Goal} from "../../models/goals.model";
@@ -10,14 +9,13 @@ export class GoalsServiceProvider {
   private goals: Goal[] = [];
   private goal: Goal;
 
-  constructor(public storage: Storage) {
-  }
+  constructor(public storage: Storage) { }
 
-  saveGoal(goal: Goal){
+  saveGoal(goal: Goal) {
     this.goals.push(goal);
     this.storage.set('goals', this.goals);
-    let count = 0;
-    count++;
+    // let count = 0;
+    // count++;
   }
 
   /*getNote(createDate: number){
@@ -28,6 +26,7 @@ export class GoalsServiceProvider {
   }*/
 
   getAllGoals(){
+
     return this.storage.get('goals').then(
       (goals) => {
         this.goals = goals == null ? [] : goals;
@@ -36,7 +35,7 @@ export class GoalsServiceProvider {
     )
   }
 
-  getGoal(){
+  getGoal() {
     return this.storage.get('goals').then((goals) => {
       return this.goal;
     });

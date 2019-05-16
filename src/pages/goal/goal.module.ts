@@ -10,4 +10,4 @@ import { GoalPage } from './goal';
     IonicPageModule.forChild(GoalPage),
   ]
 })
-export class GoalPageModule {}
+export class GoalPageModule { }

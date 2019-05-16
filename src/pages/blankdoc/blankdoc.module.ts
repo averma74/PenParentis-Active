@@ -10,4 +10,4 @@ import { BlankdocPage } from './blankdoc';
     IonicPageModule.forChild(BlankdocPage),
   ],
 })
-export class BlankdocPageModule {}
+export class BlankdocPageModule { }
